@@ -31,12 +31,7 @@ st.markdown("""
 # Carregar dados
 @st.cache_data
 def load_data():
-    df = pd.read_excel('hemoprod.xlsx')
-    # Converter colunas de data
-    date_cols = ['data_envio', 'data_inicio', 'data_ultima_acao']
-    for col in date_cols:
-        if col in df.columns:
-            df[col] = pd.to_datetime(df[col], errors='coerce')
+    df = pd.read_parquet('./dados_processados/hemoprod_nacional.parquet')
     return df
 
 df = load_data()
@@ -110,6 +105,13 @@ st.markdown("---")
 st.sidebar.header("🔍 Filtros")
 
 df_filtrado = df.copy()
+
+# Filtro de UF
+if 'uf' in df_filtrado.columns:
+    ufs = sorted(df_filtrado['uf'].dropna().unique())
+    uf_selecionada = st.sidebar.multiselect("UF", ufs, default=ufs)
+    if uf_selecionada:
+        df_filtrado = df_filtrado[df_filtrado['uf'].isin(uf_selecionada)]
 
 # 1) Ano
 if 'ano_referencia' in df_filtrado.columns:
