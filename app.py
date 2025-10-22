@@ -31,7 +31,7 @@ st.markdown("""
 # Carregar dados
 @st.cache_data
 def load_data():
-    df = pd.read_parquet('./dados_processados/hemoprod_nacional.parquet')
+    df = pd.read_excel('./dados_processados/hemoprod_ce.xlsx')
     return df
 
 df = load_data()
