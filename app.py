@@ -4,6 +4,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
+import glob
+import os
 
 # Configuração da página
 st.set_page_config(
@@ -31,7 +33,30 @@ st.markdown("""
 # Carregar dados
 @st.cache_data
 def load_data():
-    df = pd.read_excel('./dados_processados/hemoprod_ce.xlsx')
+    path = '.'  # Diretório atual
+    
+    # Usando glob para encontrar os arquivos em subpastas
+    brutos_files = glob.glob(os.path.join(path, 'dados_brutos', 'Hemoprod_*.xlsx'))
+    processados_files = glob.glob(os.path.join(path, 'dados_processados', 'hemoprod_*.xlsx'))
+    
+    all_files = brutos_files + processados_files
+    
+    if not all_files:
+        st.error("Nenhum arquivo de dados encontrado. Verifique as pastas 'dados_brutos' e 'dados_processados'.")
+        return pd.DataFrame()
+
+    df_list = []
+    for file in all_files:
+        try:
+            df_list.append(pd.read_excel(file))
+        except Exception as e:
+            st.warning(f"Erro ao ler o arquivo {file}: {e}")
+            
+    if not df_list:
+        st.error("Não foi possível carregar nenhum DataFrame. Verifique o conteúdo dos arquivos Excel.")
+        return pd.DataFrame()
+        
+    df = pd.concat(df_list, ignore_index=True)
     return df
 
 df = load_data()
