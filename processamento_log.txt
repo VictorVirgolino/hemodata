@@ -1,479 +1,154 @@
-2025-10-29 17:21:11,370 - INFO - --- INÍCIO DO SCRIPT DE PROCESSAMENTO ---
-2025-10-29 17:21:11,371 - INFO - Carregando dicionário de D:\Documentos\STTP\hemodata\hemodata\dicionario_colunas_269_COM_TIPOS.xlsx...
-2025-10-29 17:21:11,595 - INFO - Dicionário dicionario_colunas_269_COM_TIPOS.xlsx carregado e limpo com sucesso.
-2025-10-29 17:21:11,596 - INFO - Dicionário Principal carregado. Colunas desejadas para schema final: 269
-2025-10-29 17:21:11,596 - INFO - Carregando dicionário de D:\Documentos\STTP\hemodata\hemodata\dicionario_colunas_269_all.xlsx...
-2025-10-29 17:21:11,618 - INFO - Dicionário dicionario_colunas_269_all.xlsx carregado e limpo com sucesso.
-2025-10-29 17:21:11,618 - INFO - Dicionário de Mapeamento carregado. 270 mapeamentos detectados.
-2025-10-29 17:21:11,618 - INFO - --- Iniciando processamento de 27 arquivos ---
-2025-10-29 17:21:11,619 - INFO - 
-------------------------------
-[Hemoprod_AL.xlsx] Iniciando processamento...
-2025-10-29 17:21:12,069 - INFO - [Hemoprod_AL.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:12,069 - INFO - [Hemoprod_AL.xlsx] (Métrica) Linhas Originais: 315
-2025-10-29 17:21:12,070 - INFO - [Hemoprod_AL.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:12,070 - INFO - [Hemoprod_AL.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:12,139 - INFO - [Hemoprod_AL.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:12,139 - INFO - [Hemoprod_AL.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:12,139 - INFO - [Hemoprod_AL.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:12,143 - INFO - [Hemoprod_AL.xlsx] Schema padronizado.
-2025-10-29 17:21:12,143 - INFO - [Hemoprod_AL.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:12,143 - WARNING - [Hemoprod_AL.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:12,163 - INFO - [Hemoprod_AL.xlsx] Deduplicação concluída.
-2025-10-29 17:21:12,163 - INFO - [Hemoprod_AL.xlsx] (Métrica) Linhas Finais (Pós-filtro): 307
-2025-10-29 17:21:13,246 - INFO - [Hemoprod_AL.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_al.xlsx
-2025-10-29 17:21:13,247 - INFO - 
-------------------------------
-[Hemoprod_AM.xlsx] Iniciando processamento...
-2025-10-29 17:21:13,312 - INFO - [Hemoprod_AM.xlsx] (Métrica) Colunas Originais: 270
-2025-10-29 17:21:13,312 - INFO - [Hemoprod_AM.xlsx] (Métrica) Linhas Originais: 32
-2025-10-29 17:21:13,313 - INFO - [Hemoprod_AM.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:13,313 - INFO - [Hemoprod_AM.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:13,380 - INFO - [Hemoprod_AM.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:13,380 - INFO - [Hemoprod_AM.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:13,380 - INFO - [Hemoprod_AM.xlsx] (Métrica) Colunas Removidas (A Mais): 1
-2025-10-29 17:21:13,380 - INFO - [Hemoprod_AM.xlsx]      -> ['URL de referência']
-2025-10-29 17:21:13,387 - INFO - [Hemoprod_AM.xlsx] Schema padronizado.
-2025-10-29 17:21:13,387 - INFO - [Hemoprod_AM.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:13,387 - WARNING - [Hemoprod_AM.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:13,395 - INFO - [Hemoprod_AM.xlsx] Deduplicação concluída.
-2025-10-29 17:21:13,395 - INFO - [Hemoprod_AM.xlsx] (Métrica) Linhas Finais (Pós-filtro): 32
-2025-10-29 17:21:13,546 - INFO - [Hemoprod_AM.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_am.xlsx
-2025-10-29 17:21:13,547 - INFO - 
-------------------------------
-[Hemoprod_AP.xlsx] Iniciando processamento...
-2025-10-29 17:21:13,569 - INFO - [Hemoprod_AP.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:13,569 - INFO - [Hemoprod_AP.xlsx] (Métrica) Linhas Originais: 1
-2025-10-29 17:21:13,570 - INFO - [Hemoprod_AP.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:13,570 - INFO - [Hemoprod_AP.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:13,636 - INFO - [Hemoprod_AP.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:13,636 - INFO - [Hemoprod_AP.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:13,636 - INFO - [Hemoprod_AP.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:13,640 - INFO - [Hemoprod_AP.xlsx] Schema padronizado.
-2025-10-29 17:21:13,640 - INFO - [Hemoprod_AP.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:13,640 - WARNING - [Hemoprod_AP.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:13,647 - INFO - [Hemoprod_AP.xlsx] Deduplicação concluída.
-2025-10-29 17:21:13,647 - INFO - [Hemoprod_AP.xlsx] (Métrica) Linhas Finais (Pós-filtro): 1
-2025-10-29 17:21:13,689 - INFO - [Hemoprod_AP.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_ap.xlsx
-2025-10-29 17:21:13,690 - INFO - 
-------------------------------
-[Hemoprod_BA.xlsx] Iniciando processamento...
-2025-10-29 17:21:14,713 - INFO - [Hemoprod_BA.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:14,713 - INFO - [Hemoprod_BA.xlsx] (Métrica) Linhas Originais: 975
-2025-10-29 17:21:14,714 - INFO - [Hemoprod_BA.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:14,714 - INFO - [Hemoprod_BA.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:14,806 - INFO - [Hemoprod_BA.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:14,806 - INFO - [Hemoprod_BA.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:14,806 - INFO - [Hemoprod_BA.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:14,811 - INFO - [Hemoprod_BA.xlsx] Schema padronizado.
-2025-10-29 17:21:14,811 - INFO - [Hemoprod_BA.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:14,812 - WARNING - [Hemoprod_BA.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:14,830 - INFO - [Hemoprod_BA.xlsx] Deduplicação concluída.
-2025-10-29 17:21:14,830 - INFO - [Hemoprod_BA.xlsx] (Métrica) Linhas Finais (Pós-filtro): 708
-2025-10-29 17:21:17,308 - INFO - [Hemoprod_BA.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_ba.xlsx
-2025-10-29 17:21:17,310 - INFO - 
-------------------------------
-[Hemoprod_CE.xlsx] Iniciando processamento...
-2025-10-29 17:21:17,704 - INFO - [Hemoprod_CE.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:17,704 - INFO - [Hemoprod_CE.xlsx] (Métrica) Linhas Originais: 228
-2025-10-29 17:21:17,705 - INFO - [Hemoprod_CE.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:17,705 - INFO - [Hemoprod_CE.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:17,785 - INFO - [Hemoprod_CE.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:17,786 - INFO - [Hemoprod_CE.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:17,786 - INFO - [Hemoprod_CE.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:17,790 - INFO - [Hemoprod_CE.xlsx] Schema padronizado.
-2025-10-29 17:21:17,790 - INFO - [Hemoprod_CE.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:17,790 - WARNING - [Hemoprod_CE.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:17,806 - INFO - [Hemoprod_CE.xlsx] Deduplicação concluída.
-2025-10-29 17:21:17,806 - INFO - [Hemoprod_CE.xlsx] (Métrica) Linhas Finais (Pós-filtro): 66
-2025-10-29 17:21:18,079 - INFO - [Hemoprod_CE.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_ce.xlsx
-2025-10-29 17:21:18,080 - INFO - 
-------------------------------
-[Hemoprod_DF.xlsx] Iniciando processamento...
-2025-10-29 17:21:18,348 - INFO - [Hemoprod_DF.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:18,348 - INFO - [Hemoprod_DF.xlsx] (Métrica) Linhas Originais: 184
-2025-10-29 17:21:18,349 - INFO - [Hemoprod_DF.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:18,349 - INFO - [Hemoprod_DF.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:18,427 - INFO - [Hemoprod_DF.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:18,428 - INFO - [Hemoprod_DF.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 2
-2025-10-29 17:21:18,428 - INFO - [Hemoprod_DF.xlsx]      -> ['razao_social_nome_fantasia_outros', 'razao_social_nome_fantasia']
-2025-10-29 17:21:18,428 - INFO - [Hemoprod_DF.xlsx] (Métrica) Colunas Removidas (A Mais): 2
-2025-10-29 17:21:18,428 - INFO - [Hemoprod_DF.xlsx]      -> ['Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.', 'Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.  [Outros]']
-2025-10-29 17:21:18,431 - INFO - [Hemoprod_DF.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:21:18,438 - INFO - [Hemoprod_DF.xlsx] Schema padronizado.
-2025-10-29 17:21:18,438 - INFO - [Hemoprod_DF.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:18,438 - WARNING - [Hemoprod_DF.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:18,453 - INFO - [Hemoprod_DF.xlsx] Deduplicação concluída.
-2025-10-29 17:21:18,453 - INFO - [Hemoprod_DF.xlsx] (Métrica) Linhas Finais (Pós-filtro): 183
-2025-10-29 17:21:19,074 - INFO - [Hemoprod_DF.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_df.xlsx
-2025-10-29 17:21:19,075 - INFO - 
-------------------------------
-[Hemoprod_ES.xlsx] Iniciando processamento...
-2025-10-29 17:21:20,904 - INFO - [Hemoprod_ES.xlsx] (Métrica) Colunas Originais: 257
-2025-10-29 17:21:20,904 - INFO - [Hemoprod_ES.xlsx] (Métrica) Linhas Originais: 1827
-2025-10-29 17:21:20,905 - INFO - [Hemoprod_ES.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:20,905 - INFO - [Hemoprod_ES.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:21,010 - INFO - [Hemoprod_ES.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:21,010 - INFO - [Hemoprod_ES.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 15
-2025-10-29 17:21:21,010 - INFO - [Hemoprod_ES.xlsx]      -> ['tranfusoes_concentrado_de_plaquetas_de_aferese_ambulatorial', 'perdas_concentrado_de_plaquetas_de_aferese_validade', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_com_exame_pre_transfusional', 'ano_referencia', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_sem_exame_pre_transfusional', 'perdas_concentrado_de_plaquetas_de_aferese_rompimento_de_bolsa', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_devolvidas', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_recebidas', 'tranfusoes_concentrado_de_plaquetas_de_aferese_total', 'tranfusoes_concentrado_de_plaquetas_de_aferese_hospitalar', 'rede_estabelecimento', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_produzidas', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_total', 'dados_informados_referem_se', 'perdas_concentrado_de_plaquetas_de_aferese_outros_motivos']
-2025-10-29 17:21:21,010 - INFO - [Hemoprod_ES.xlsx] (Métrica) Colunas Removidas (A Mais): 3
-2025-10-29 17:21:21,010 - INFO - [Hemoprod_ES.xlsx]      -> ['Período de referência [Outros]', 'URL de referência', 'Município [Outros]']
-2025-10-29 17:21:21,016 - INFO - [Hemoprod_ES.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:21:21,039 - INFO - [Hemoprod_ES.xlsx] Schema padronizado.
-2025-10-29 17:21:21,039 - INFO - [Hemoprod_ES.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:21,039 - WARNING - [Hemoprod_ES.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:21,061 - INFO - [Hemoprod_ES.xlsx] Deduplicação concluída.
-2025-10-29 17:21:21,061 - INFO - [Hemoprod_ES.xlsx] (Métrica) Linhas Finais (Pós-filtro): 1744
-2025-10-29 17:21:27,326 - INFO - [Hemoprod_ES.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_es.xlsx
-2025-10-29 17:21:27,330 - INFO - 
-------------------------------
-[Hemoprod_GO.xlsx] Iniciando processamento...
-2025-10-29 17:21:28,128 - INFO - [Hemoprod_GO.xlsx] (Métrica) Colunas Originais: 257
-2025-10-29 17:21:28,128 - INFO - [Hemoprod_GO.xlsx] (Métrica) Linhas Originais: 474
-2025-10-29 17:21:28,129 - INFO - [Hemoprod_GO.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:28,129 - INFO - [Hemoprod_GO.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:28,202 - INFO - [Hemoprod_GO.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:28,203 - INFO - [Hemoprod_GO.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 12
-2025-10-29 17:21:28,203 - INFO - [Hemoprod_GO.xlsx]      -> ['tranfusoes_concentrado_de_plaquetas_de_aferese_ambulatorial', 'perdas_concentrado_de_plaquetas_de_aferese_validade', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_com_exame_pre_transfusional', 'perdas_concentrado_de_plaquetas_de_aferese_rompimento_de_bolsa', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_sem_exame_pre_transfusional', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_devolvidas', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_recebidas', 'tranfusoes_concentrado_de_plaquetas_de_aferese_total', 'tranfusoes_concentrado_de_plaquetas_de_aferese_hospitalar', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_produzidas', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_total', 'perdas_concentrado_de_plaquetas_de_aferese_outros_motivos']
-2025-10-29 17:21:28,203 - INFO - [Hemoprod_GO.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:28,203 - INFO - [Hemoprod_GO.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:21:28,216 - INFO - [Hemoprod_GO.xlsx] Schema padronizado.
-2025-10-29 17:21:28,216 - INFO - [Hemoprod_GO.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:28,216 - WARNING - [Hemoprod_GO.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:28,232 - INFO - [Hemoprod_GO.xlsx] Deduplicação concluída.
-2025-10-29 17:21:28,233 - INFO - [Hemoprod_GO.xlsx] (Métrica) Linhas Finais (Pós-filtro): 471
-2025-10-29 17:21:30,004 - INFO - [Hemoprod_GO.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_go.xlsx
-2025-10-29 17:21:30,006 - INFO - 
-------------------------------
-[Hemoprod_Hemominas.xlsx] Iniciando processamento...
-2025-10-29 17:21:31,409 - INFO - [Hemoprod_Hemominas.xlsx] (Métrica) Colunas Originais: 270
-2025-10-29 17:21:31,410 - INFO - [Hemoprod_Hemominas.xlsx] (Métrica) Linhas Originais: 930
-2025-10-29 17:21:31,410 - INFO - [Hemoprod_Hemominas.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:31,411 - INFO - [Hemoprod_Hemominas.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:31,487 - INFO - [Hemoprod_Hemominas.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:31,488 - INFO - [Hemoprod_Hemominas.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:31,488 - INFO - [Hemoprod_Hemominas.xlsx] (Métrica) Colunas Removidas (A Mais): 1
-2025-10-29 17:21:31,488 - INFO - [Hemoprod_Hemominas.xlsx]      -> ['Município [Outros]']
-2025-10-29 17:21:31,496 - INFO - [Hemoprod_Hemominas.xlsx] Schema padronizado.
-2025-10-29 17:21:31,497 - INFO - [Hemoprod_Hemominas.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:31,497 - WARNING - [Hemoprod_Hemominas.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:31,506 - INFO - [Hemoprod_Hemominas.xlsx] Deduplicação concluída.
-2025-10-29 17:21:31,506 - INFO - [Hemoprod_Hemominas.xlsx] (Métrica) Linhas Finais (Pós-filtro): 930
-2025-10-29 17:21:34,990 - INFO - [Hemoprod_Hemominas.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_hm.xlsx
-2025-10-29 17:21:34,992 - INFO - 
-------------------------------
-[Hemoprod_MA.xlsx] Iniciando processamento...
-2025-10-29 17:21:35,055 - INFO - [Hemoprod_MA.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:35,055 - INFO - [Hemoprod_MA.xlsx] (Métrica) Linhas Originais: 45
-2025-10-29 17:21:35,056 - INFO - [Hemoprod_MA.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:35,056 - INFO - [Hemoprod_MA.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:35,121 - INFO - [Hemoprod_MA.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:35,121 - INFO - [Hemoprod_MA.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 2
-2025-10-29 17:21:35,121 - INFO - [Hemoprod_MA.xlsx]      -> ['razao_social_nome_fantasia_outros', 'razao_social_nome_fantasia']
-2025-10-29 17:21:35,122 - INFO - [Hemoprod_MA.xlsx] (Métrica) Colunas Removidas (A Mais): 2
-2025-10-29 17:21:35,122 - INFO - [Hemoprod_MA.xlsx]      -> ['Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.', 'Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.  [Outros]']
-2025-10-29 17:21:35,125 - INFO - [Hemoprod_MA.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:21:35,131 - INFO - [Hemoprod_MA.xlsx] Schema padronizado.
-2025-10-29 17:21:35,132 - INFO - [Hemoprod_MA.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:35,132 - WARNING - [Hemoprod_MA.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:35,142 - INFO - [Hemoprod_MA.xlsx] Deduplicação concluída.
-2025-10-29 17:21:35,143 - INFO - [Hemoprod_MA.xlsx] (Métrica) Linhas Finais (Pós-filtro): 44
-2025-10-29 17:21:35,334 - INFO - [Hemoprod_MA.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_ma.xlsx
-2025-10-29 17:21:35,335 - INFO - 
-------------------------------
-[Hemoprod_MG.xlsx] Iniciando processamento...
-2025-10-29 17:21:35,835 - INFO - [Hemoprod_MG.xlsx] (Métrica) Colunas Originais: 270
-2025-10-29 17:21:35,835 - INFO - [Hemoprod_MG.xlsx] (Métrica) Linhas Originais: 271
-2025-10-29 17:21:35,836 - INFO - [Hemoprod_MG.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:35,836 - INFO - [Hemoprod_MG.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:35,904 - INFO - [Hemoprod_MG.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:35,904 - INFO - [Hemoprod_MG.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:35,904 - INFO - [Hemoprod_MG.xlsx] (Métrica) Colunas Removidas (A Mais): 1
-2025-10-29 17:21:35,904 - INFO - [Hemoprod_MG.xlsx]      -> ['Município [Outros]']
-2025-10-29 17:21:35,911 - INFO - [Hemoprod_MG.xlsx] Schema padronizado.
-2025-10-29 17:21:35,911 - INFO - [Hemoprod_MG.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:35,911 - WARNING - [Hemoprod_MG.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:35,928 - INFO - [Hemoprod_MG.xlsx] Deduplicação concluída.
-2025-10-29 17:21:35,929 - INFO - [Hemoprod_MG.xlsx] (Métrica) Linhas Finais (Pós-filtro): 263
-2025-10-29 17:21:36,906 - INFO - [Hemoprod_MG.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_mg.xlsx
-2025-10-29 17:21:36,907 - INFO - 
-------------------------------
-[Hemoprod_MS.xlsx] Iniciando processamento...
-2025-10-29 17:21:37,571 - INFO - [Hemoprod_MS.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:37,571 - INFO - [Hemoprod_MS.xlsx] (Métrica) Linhas Originais: 444
-2025-10-29 17:21:37,572 - INFO - [Hemoprod_MS.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:37,572 - INFO - [Hemoprod_MS.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:37,654 - INFO - [Hemoprod_MS.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:37,655 - INFO - [Hemoprod_MS.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 3
-2025-10-29 17:21:37,655 - INFO - [Hemoprod_MS.xlsx]      -> ['dados_informados_referem_se', 'rede_estabelecimento', 'ano_referencia']
-2025-10-29 17:21:37,655 - INFO - [Hemoprod_MS.xlsx] (Métrica) Colunas Removidas (A Mais): 3
-2025-10-29 17:21:37,655 - INFO - [Hemoprod_MS.xlsx]      -> ['Período de referência [Outros]', 'URL de referência', 'Município [Outros]']
-2025-10-29 17:21:37,658 - INFO - [Hemoprod_MS.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:21:37,665 - INFO - [Hemoprod_MS.xlsx] Schema padronizado.
-2025-10-29 17:21:37,666 - INFO - [Hemoprod_MS.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:37,666 - WARNING - [Hemoprod_MS.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:37,681 - INFO - [Hemoprod_MS.xlsx] Deduplicação concluída.
-2025-10-29 17:21:37,681 - INFO - [Hemoprod_MS.xlsx] (Métrica) Linhas Finais (Pós-filtro): 418
-2025-10-29 17:21:39,310 - INFO - [Hemoprod_MS.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_ms.xlsx
-2025-10-29 17:21:39,312 - INFO - 
-------------------------------
-[Hemoprod_MT.xlsx] Iniciando processamento...
-2025-10-29 17:21:41,316 - INFO - [Hemoprod_MT.xlsx] (Métrica) Colunas Originais: 256
-2025-10-29 17:21:41,316 - INFO - [Hemoprod_MT.xlsx] (Métrica) Linhas Originais: 1720
-2025-10-29 17:21:41,317 - INFO - [Hemoprod_MT.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:41,317 - INFO - [Hemoprod_MT.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:41,417 - INFO - [Hemoprod_MT.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:41,417 - INFO - [Hemoprod_MT.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 17
-2025-10-29 17:21:41,417 - INFO - [Hemoprod_MT.xlsx]      -> ['tranfusoes_concentrado_de_plaquetas_de_aferese_ambulatorial', 'perdas_concentrado_de_plaquetas_de_aferese_validade', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_com_exame_pre_transfusional', 'ano_referencia', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_sem_exame_pre_transfusional', 'perdas_concentrado_de_plaquetas_de_aferese_rompimento_de_bolsa', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_devolvidas', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_recebidas', 'tranfusoes_concentrado_de_plaquetas_de_aferese_total', 'tranfusoes_concentrado_de_plaquetas_de_aferese_hospitalar', 'perdas_concentrado_de_plaquetas_de_aferese_outros_motivos', 'rede_estabelecimento', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_produzidas', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_total', 'dados_informados_referem_se', 'razao_social_nome_fantasia_outros', 'razao_social_nome_fantasia']
-2025-10-29 17:21:41,417 - INFO - [Hemoprod_MT.xlsx] (Métrica) Colunas Removidas (A Mais): 4
-2025-10-29 17:21:41,417 - INFO - [Hemoprod_MT.xlsx]      -> ['Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.  [Outros]', 'Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.', 'URL de referência', 'Município [Outros]']
-2025-10-29 17:21:41,423 - INFO - [Hemoprod_MT.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:21:41,444 - INFO - [Hemoprod_MT.xlsx] Schema padronizado.
-2025-10-29 17:21:41,444 - INFO - [Hemoprod_MT.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:41,444 - WARNING - [Hemoprod_MT.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:41,464 - INFO - [Hemoprod_MT.xlsx] Deduplicação concluída.
-2025-10-29 17:21:41,464 - INFO - [Hemoprod_MT.xlsx] (Métrica) Linhas Finais (Pós-filtro): 1514
-2025-10-29 17:21:47,015 - INFO - [Hemoprod_MT.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_mt.xlsx
-2025-10-29 17:21:47,018 - INFO - 
-------------------------------
-[Hemoprod_PA.xlsx] Iniciando processamento...
-2025-10-29 17:21:48,326 - INFO - [Hemoprod_PA.xlsx] (Métrica) Colunas Originais: 256
-2025-10-29 17:21:48,326 - INFO - [Hemoprod_PA.xlsx] (Métrica) Linhas Originais: 1128
-2025-10-29 17:21:48,327 - INFO - [Hemoprod_PA.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:48,327 - INFO - [Hemoprod_PA.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:48,415 - INFO - [Hemoprod_PA.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:48,415 - INFO - [Hemoprod_PA.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 17
-2025-10-29 17:21:48,416 - INFO - [Hemoprod_PA.xlsx]      -> ['tranfusoes_concentrado_de_plaquetas_de_aferese_ambulatorial', 'perdas_concentrado_de_plaquetas_de_aferese_validade', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_com_exame_pre_transfusional', 'perdas_concentrado_de_plaquetas_de_aferese_rompimento_de_bolsa', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_sem_exame_pre_transfusional', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_devolvidas', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_recebidas', 'tranfusoes_concentrado_de_plaquetas_de_aferese_total', 'tranfusoes_concentrado_de_plaquetas_de_aferese_hospitalar', 'perdas_concentrado_de_plaquetas_de_aferese_outros_motivos', 'rede_estabelecimento', 'municipio', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_total', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_produzidas', 'dados_informados_referem_se', 'razao_social_nome_fantasia_outros', 'razao_social_nome_fantasia']
-2025-10-29 17:21:48,416 - INFO - [Hemoprod_PA.xlsx] (Métrica) Colunas Removidas (A Mais): 4
-2025-10-29 17:21:48,416 - INFO - [Hemoprod_PA.xlsx]      -> ['Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.  [Outros]', 'Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.', 'Município  ATENÇÃO!!! A lista de municípios abaixo foi atualizada e deve ser priorizada para preenchimento do local.  [Outros]', 'Município  ATENÇÃO!!! A lista de municípios abaixo foi atualizada e deve ser priorizada para preenchimento do local.']
-2025-10-29 17:21:48,420 - INFO - [Hemoprod_PA.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:21:48,438 - INFO - [Hemoprod_PA.xlsx] Schema padronizado.
-2025-10-29 17:21:48,438 - INFO - [Hemoprod_PA.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:48,438 - WARNING - [Hemoprod_PA.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:48,456 - INFO - [Hemoprod_PA.xlsx] Deduplicação concluída.
-2025-10-29 17:21:48,456 - INFO - [Hemoprod_PA.xlsx] (Métrica) Linhas Finais (Pós-filtro): 686
-2025-10-29 17:21:50,887 - INFO - [Hemoprod_PA.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_pa.xlsx
-2025-10-29 17:21:50,889 - INFO - 
-------------------------------
-[Hemoprod_PB.xlsx] Iniciando processamento...
-2025-10-29 17:21:51,098 - INFO - [Hemoprod_PB.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:51,098 - INFO - [Hemoprod_PB.xlsx] (Métrica) Linhas Originais: 176
-2025-10-29 17:21:51,099 - INFO - [Hemoprod_PB.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:51,099 - INFO - [Hemoprod_PB.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:51,172 - INFO - [Hemoprod_PB.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:51,172 - INFO - [Hemoprod_PB.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:51,173 - INFO - [Hemoprod_PB.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:51,177 - INFO - [Hemoprod_PB.xlsx] Schema padronizado.
-2025-10-29 17:21:51,177 - INFO - [Hemoprod_PB.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:51,177 - WARNING - [Hemoprod_PB.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:51,194 - INFO - [Hemoprod_PB.xlsx] Deduplicação concluída.
-2025-10-29 17:21:51,195 - INFO - [Hemoprod_PB.xlsx] (Métrica) Linhas Finais (Pós-filtro): 168
-2025-10-29 17:21:51,861 - INFO - [Hemoprod_PB.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_pb.xlsx
-2025-10-29 17:21:51,863 - INFO - 
-------------------------------
-[Hemoprod_PE.xlsx] Iniciando processamento...
-2025-10-29 17:21:52,515 - INFO - [Hemoprod_PE.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:52,515 - INFO - [Hemoprod_PE.xlsx] (Métrica) Linhas Originais: 507
-2025-10-29 17:21:52,516 - INFO - [Hemoprod_PE.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:52,517 - INFO - [Hemoprod_PE.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:52,587 - INFO - [Hemoprod_PE.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:52,587 - INFO - [Hemoprod_PE.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:52,587 - INFO - [Hemoprod_PE.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:52,591 - INFO - [Hemoprod_PE.xlsx] Schema padronizado.
-2025-10-29 17:21:52,592 - INFO - [Hemoprod_PE.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:52,592 - WARNING - [Hemoprod_PE.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:52,610 - INFO - [Hemoprod_PE.xlsx] Deduplicação concluída.
-2025-10-29 17:21:52,610 - INFO - [Hemoprod_PE.xlsx] (Métrica) Linhas Finais (Pós-filtro): 432
-2025-10-29 17:21:54,230 - INFO - [Hemoprod_PE.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_pe.xlsx
-2025-10-29 17:21:54,231 - INFO - 
-------------------------------
-[Hemoprod_PI.xlsx] Iniciando processamento...
-2025-10-29 17:21:54,349 - INFO - [Hemoprod_PI.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:54,349 - INFO - [Hemoprod_PI.xlsx] (Métrica) Linhas Originais: 81
-2025-10-29 17:21:54,350 - INFO - [Hemoprod_PI.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:54,350 - INFO - [Hemoprod_PI.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:54,418 - INFO - [Hemoprod_PI.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:54,419 - INFO - [Hemoprod_PI.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:54,419 - INFO - [Hemoprod_PI.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:54,423 - INFO - [Hemoprod_PI.xlsx] Schema padronizado.
-2025-10-29 17:21:54,423 - INFO - [Hemoprod_PI.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:54,423 - WARNING - [Hemoprod_PI.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:54,440 - INFO - [Hemoprod_PI.xlsx] Deduplicação concluída.
-2025-10-29 17:21:54,441 - INFO - [Hemoprod_PI.xlsx] (Métrica) Linhas Finais (Pós-filtro): 80
-2025-10-29 17:21:54,769 - INFO - [Hemoprod_PI.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_pi.xlsx
-2025-10-29 17:21:54,770 - INFO - 
-------------------------------
-[Hemoprod_PR.xlsx] Iniciando processamento...
-2025-10-29 17:21:56,292 - INFO - [Hemoprod_PR.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:56,293 - INFO - [Hemoprod_PR.xlsx] (Métrica) Linhas Originais: 920
-2025-10-29 17:21:56,294 - INFO - [Hemoprod_PR.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:56,294 - INFO - [Hemoprod_PR.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:56,396 - INFO - [Hemoprod_PR.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:56,396 - INFO - [Hemoprod_PR.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:56,397 - INFO - [Hemoprod_PR.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:56,403 - INFO - [Hemoprod_PR.xlsx] Schema padronizado.
-2025-10-29 17:21:56,403 - INFO - [Hemoprod_PR.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:56,404 - WARNING - [Hemoprod_PR.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:56,424 - INFO - [Hemoprod_PR.xlsx] Deduplicação concluída.
-2025-10-29 17:21:56,425 - INFO - [Hemoprod_PR.xlsx] (Métrica) Linhas Finais (Pós-filtro): 808
-2025-10-29 17:21:59,515 - INFO - [Hemoprod_PR.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_pr.xlsx
-2025-10-29 17:21:59,517 - INFO - 
-------------------------------
-[Hemoprod_RJ.xlsx] Iniciando processamento...
-2025-10-29 17:21:59,616 - INFO - [Hemoprod_RJ.xlsx] (Métrica) Colunas Originais: 270
-2025-10-29 17:21:59,616 - INFO - [Hemoprod_RJ.xlsx] (Métrica) Linhas Originais: 54
-2025-10-29 17:21:59,617 - INFO - [Hemoprod_RJ.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:59,617 - INFO - [Hemoprod_RJ.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:59,682 - INFO - [Hemoprod_RJ.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:59,682 - INFO - [Hemoprod_RJ.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:59,682 - INFO - [Hemoprod_RJ.xlsx] (Métrica) Colunas Removidas (A Mais): 1
-2025-10-29 17:21:59,683 - INFO - [Hemoprod_RJ.xlsx]      -> ['URL de referência']
-2025-10-29 17:21:59,689 - INFO - [Hemoprod_RJ.xlsx] Schema padronizado.
-2025-10-29 17:21:59,689 - INFO - [Hemoprod_RJ.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:59,689 - WARNING - [Hemoprod_RJ.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:59,700 - INFO - [Hemoprod_RJ.xlsx] Deduplicação concluída.
-2025-10-29 17:21:59,700 - INFO - [Hemoprod_RJ.xlsx] (Métrica) Linhas Finais (Pós-filtro): 3
-2025-10-29 17:21:59,749 - INFO - [Hemoprod_RJ.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_rj.xlsx
-2025-10-29 17:21:59,750 - INFO - 
-------------------------------
-[Hemoprod_RN.xlsx] Iniciando processamento...
-2025-10-29 17:21:59,862 - INFO - [Hemoprod_RN.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:21:59,862 - INFO - [Hemoprod_RN.xlsx] (Métrica) Linhas Originais: 79
-2025-10-29 17:21:59,863 - INFO - [Hemoprod_RN.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:21:59,863 - INFO - [Hemoprod_RN.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:21:59,931 - INFO - [Hemoprod_RN.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:21:59,931 - INFO - [Hemoprod_RN.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:21:59,931 - INFO - [Hemoprod_RN.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:21:59,936 - INFO - [Hemoprod_RN.xlsx] Schema padronizado.
-2025-10-29 17:21:59,936 - INFO - [Hemoprod_RN.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:21:59,937 - WARNING - [Hemoprod_RN.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:21:59,950 - INFO - [Hemoprod_RN.xlsx] Deduplicação concluída.
-2025-10-29 17:21:59,950 - INFO - [Hemoprod_RN.xlsx] (Métrica) Linhas Finais (Pós-filtro): 77
-2025-10-29 17:22:00,265 - INFO - [Hemoprod_RN.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_rn.xlsx
-2025-10-29 17:22:00,266 - INFO - 
-------------------------------
-[Hemoprod_RO.xlsx] Iniciando processamento...
-2025-10-29 17:22:00,906 - INFO - [Hemoprod_RO.xlsx] (Métrica) Colunas Originais: 257
-2025-10-29 17:22:00,907 - INFO - [Hemoprod_RO.xlsx] (Métrica) Linhas Originais: 542
-2025-10-29 17:22:00,908 - INFO - [Hemoprod_RO.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:22:00,908 - INFO - [Hemoprod_RO.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:22:00,970 - INFO - [Hemoprod_RO.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:22:00,971 - INFO - [Hemoprod_RO.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 17
-2025-10-29 17:22:00,971 - INFO - [Hemoprod_RO.xlsx]      -> ['tranfusoes_concentrado_de_plaquetas_de_aferese_ambulatorial', 'perdas_concentrado_de_plaquetas_de_aferese_validade', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_com_exame_pre_transfusional', 'ano_referencia', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_sem_exame_pre_transfusional', 'perdas_concentrado_de_plaquetas_de_aferese_rompimento_de_bolsa', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_devolvidas', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_recebidas', 'tranfusoes_concentrado_de_plaquetas_de_aferese_total', 'tranfusoes_concentrado_de_plaquetas_de_aferese_hospitalar', 'perdas_concentrado_de_plaquetas_de_aferese_outros_motivos', 'rede_estabelecimento', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_produzidas', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_total', 'dados_informados_referem_se', 'razao_social_nome_fantasia_outros', 'razao_social_nome_fantasia']
-2025-10-29 17:22:00,971 - INFO - [Hemoprod_RO.xlsx] (Métrica) Colunas Removidas (A Mais): 5
-2025-10-29 17:22:00,971 - INFO - [Hemoprod_RO.xlsx]      -> ['URL de referência', 'Município [Outros]', 'Período de referência [Outros]', 'Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.', 'Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.  [Outros]']
-2025-10-29 17:22:00,975 - INFO - [Hemoprod_RO.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:22:00,990 - INFO - [Hemoprod_RO.xlsx] Schema padronizado.
-2025-10-29 17:22:00,990 - INFO - [Hemoprod_RO.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:22:00,991 - WARNING - [Hemoprod_RO.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:22:01,002 - INFO - [Hemoprod_RO.xlsx] Deduplicação concluída.
-2025-10-29 17:22:01,002 - INFO - [Hemoprod_RO.xlsx] (Métrica) Linhas Finais (Pós-filtro): 30
-2025-10-29 17:22:01,145 - INFO - [Hemoprod_RO.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_ro.xlsx
-2025-10-29 17:22:01,147 - INFO - 
-------------------------------
-[Hemoprod_RR.xlsx] Iniciando processamento...
-2025-10-29 17:22:01,201 - INFO - [Hemoprod_RR.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:22:01,202 - INFO - [Hemoprod_RR.xlsx] (Métrica) Linhas Originais: 25
-2025-10-29 17:22:01,202 - INFO - [Hemoprod_RR.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:22:01,203 - INFO - [Hemoprod_RR.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:22:01,271 - INFO - [Hemoprod_RR.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:22:01,271 - INFO - [Hemoprod_RR.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:22:01,271 - INFO - [Hemoprod_RR.xlsx] (Métrica) Colunas Removidas (A Mais): 0
-2025-10-29 17:22:01,279 - INFO - [Hemoprod_RR.xlsx] Schema padronizado.
-2025-10-29 17:22:01,279 - INFO - [Hemoprod_RR.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:22:01,279 - WARNING - [Hemoprod_RR.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:22:01,289 - INFO - [Hemoprod_RR.xlsx] Deduplicação concluída.
-2025-10-29 17:22:01,289 - INFO - [Hemoprod_RR.xlsx] (Métrica) Linhas Finais (Pós-filtro): 25
-2025-10-29 17:22:01,436 - INFO - [Hemoprod_RR.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_rr.xlsx
-2025-10-29 17:22:01,437 - INFO - 
-------------------------------
-[Hemoprod_RS.xlsx] Iniciando processamento...
-2025-10-29 17:22:05,978 - INFO - [Hemoprod_RS.xlsx] (Métrica) Colunas Originais: 256
-2025-10-29 17:22:05,978 - INFO - [Hemoprod_RS.xlsx] (Métrica) Linhas Originais: 4332
-2025-10-29 17:22:05,979 - INFO - [Hemoprod_RS.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:22:05,979 - INFO - [Hemoprod_RS.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:22:06,119 - INFO - [Hemoprod_RS.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:22:06,119 - INFO - [Hemoprod_RS.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 16
-2025-10-29 17:22:06,119 - INFO - [Hemoprod_RS.xlsx]      -> ['tranfusoes_concentrado_de_plaquetas_de_aferese_ambulatorial', 'perdas_concentrado_de_plaquetas_de_aferese_validade', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_com_exame_pre_transfusional', 'perdas_concentrado_de_plaquetas_de_aferese_rompimento_de_bolsa', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_sem_exame_pre_transfusional', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_devolvidas', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_recebidas', 'tranfusoes_concentrado_de_plaquetas_de_aferese_total', 'tranfusoes_concentrado_de_plaquetas_de_aferese_hospitalar', 'perdas_concentrado_de_plaquetas_de_aferese_outros_motivos', 'rede_estabelecimento', 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_produzidas', 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_total', 'dados_informados_referem_se', 'razao_social_nome_fantasia_outros', 'razao_social_nome_fantasia']
-2025-10-29 17:22:06,119 - INFO - [Hemoprod_RS.xlsx] (Métrica) Colunas Removidas (A Mais): 3
-2025-10-29 17:22:06,119 - INFO - [Hemoprod_RS.xlsx]      -> ['Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.', 'URL de referência', 'Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.  [Outros]']
-2025-10-29 17:22:06,128 - INFO - [Hemoprod_RS.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:22:06,159 - INFO - [Hemoprod_RS.xlsx] Schema padronizado.
-2025-10-29 17:22:06,159 - INFO - [Hemoprod_RS.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:22:06,160 - WARNING - [Hemoprod_RS.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:22:06,187 - INFO - [Hemoprod_RS.xlsx] Deduplicação concluída.
-2025-10-29 17:22:06,187 - INFO - [Hemoprod_RS.xlsx] (Métrica) Linhas Finais (Pós-filtro): 4116
-2025-10-29 17:22:21,109 - INFO - [Hemoprod_RS.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_rs.xlsx
-2025-10-29 17:22:21,114 - INFO - 
-------------------------------
-[Hemoprod_SC.xlsx] Iniciando processamento...
-2025-10-29 17:22:21,948 - INFO - [Hemoprod_SC.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:22:21,948 - INFO - [Hemoprod_SC.xlsx] (Métrica) Linhas Originais: 744
-2025-10-29 17:22:21,949 - INFO - [Hemoprod_SC.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:22:21,949 - INFO - [Hemoprod_SC.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:22:22,034 - INFO - [Hemoprod_SC.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:22:22,034 - INFO - [Hemoprod_SC.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 2
-2025-10-29 17:22:22,034 - INFO - [Hemoprod_SC.xlsx]      -> ['razao_social_nome_fantasia_outros', 'razao_social_nome_fantasia']
-2025-10-29 17:22:22,035 - INFO - [Hemoprod_SC.xlsx] (Métrica) Colunas Removidas (A Mais): 2
-2025-10-29 17:22:22,035 - INFO - [Hemoprod_SC.xlsx]      -> ['Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.', 'Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.  [Outros]']
-2025-10-29 17:22:22,040 - INFO - [Hemoprod_SC.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:22:22,049 - INFO - [Hemoprod_SC.xlsx] Schema padronizado.
-2025-10-29 17:22:22,049 - INFO - [Hemoprod_SC.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:22:22,049 - WARNING - [Hemoprod_SC.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:22:22,065 - INFO - [Hemoprod_SC.xlsx] Deduplicação concluída.
-2025-10-29 17:22:22,065 - INFO - [Hemoprod_SC.xlsx] (Métrica) Linhas Finais (Pós-filtro): 228
-2025-10-29 17:22:22,865 - INFO - [Hemoprod_SC.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_sc.xlsx
-2025-10-29 17:22:22,867 - INFO - 
-------------------------------
-[Hemoprod_SE.xlsx] Iniciando processamento...
-2025-10-29 17:22:24,173 - INFO - [Hemoprod_SE.xlsx] (Métrica) Colunas Originais: 269
-2025-10-29 17:22:24,173 - INFO - [Hemoprod_SE.xlsx] (Métrica) Linhas Originais: 904
-2025-10-29 17:22:24,174 - INFO - [Hemoprod_SE.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:22:24,174 - INFO - [Hemoprod_SE.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:22:24,268 - INFO - [Hemoprod_SE.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:22:24,269 - INFO - [Hemoprod_SE.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 2
-2025-10-29 17:22:24,269 - INFO - [Hemoprod_SE.xlsx]      -> ['razao_social_nome_fantasia_outros', 'razao_social_nome_fantasia']
-2025-10-29 17:22:24,269 - INFO - [Hemoprod_SE.xlsx] (Métrica) Colunas Removidas (A Mais): 2
-2025-10-29 17:22:24,269 - INFO - [Hemoprod_SE.xlsx]      -> ['Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.', 'Razão Social - Nome Fantasia  ATENÇÃO!!! A lista de estabelecimentos abaixo é atualizada frequentemente e deve ser priorizada para preenchimento do nome fantasia. Use a opção "Outro" apenas se não for possível identificar o nome do estabelecimento por ela.  [Outros]']
-2025-10-29 17:22:24,273 - INFO - [Hemoprod_SE.xlsx] Adicionando colunas faltantes de forma otimizada...
-2025-10-29 17:22:24,281 - INFO - [Hemoprod_SE.xlsx] Schema padronizado.
-2025-10-29 17:22:24,282 - INFO - [Hemoprod_SE.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:22:24,282 - WARNING - [Hemoprod_SE.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:22:24,299 - INFO - [Hemoprod_SE.xlsx] Deduplicação concluída.
-2025-10-29 17:22:24,299 - INFO - [Hemoprod_SE.xlsx] (Métrica) Linhas Finais (Pós-filtro): 882
-2025-10-29 17:22:27,510 - INFO - [Hemoprod_SE.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_se.xlsx
-2025-10-29 17:22:27,512 - INFO - 
-------------------------------
-[Hemoprod_SP.xlsx] Iniciando processamento...
-2025-10-29 17:22:27,541 - INFO - [Hemoprod_SP.xlsx] (Métrica) Colunas Originais: 270
-2025-10-29 17:22:27,541 - INFO - [Hemoprod_SP.xlsx] (Métrica) Linhas Originais: 9
-2025-10-29 17:22:27,542 - INFO - [Hemoprod_SP.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:22:27,542 - INFO - [Hemoprod_SP.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:22:27,608 - INFO - [Hemoprod_SP.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:22:27,609 - INFO - [Hemoprod_SP.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:22:27,609 - INFO - [Hemoprod_SP.xlsx] (Métrica) Colunas Removidas (A Mais): 1
-2025-10-29 17:22:27,609 - INFO - [Hemoprod_SP.xlsx]      -> ['URL de referência']
-2025-10-29 17:22:27,616 - INFO - [Hemoprod_SP.xlsx] Schema padronizado.
-2025-10-29 17:22:27,616 - INFO - [Hemoprod_SP.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:22:27,617 - WARNING - [Hemoprod_SP.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:22:27,624 - INFO - [Hemoprod_SP.xlsx] Deduplicação concluída.
-2025-10-29 17:22:27,624 - INFO - [Hemoprod_SP.xlsx] (Métrica) Linhas Finais (Pós-filtro): 9
-2025-10-29 17:22:27,694 - INFO - [Hemoprod_SP.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_sp.xlsx
-2025-10-29 17:22:27,694 - INFO - 
-------------------------------
-[Hemoprod_TO.xlsx] Iniciando processamento...
-2025-10-29 17:22:27,962 - INFO - [Hemoprod_TO.xlsx] (Métrica) Colunas Originais: 270
-2025-10-29 17:22:27,962 - INFO - [Hemoprod_TO.xlsx] (Métrica) Linhas Originais: 195
-2025-10-29 17:22:27,963 - INFO - [Hemoprod_TO.xlsx] Colunas limpas e renomeadas.
-2025-10-29 17:22:27,963 - INFO - [Hemoprod_TO.xlsx] Iniciando aplicação de tipos definidos...
-2025-10-29 17:22:28,046 - INFO - [Hemoprod_TO.xlsx] Aplicação de tipos concluída.
-2025-10-29 17:22:28,047 - INFO - [Hemoprod_TO.xlsx] (Métrica) Colunas Adicionadas (Faltantes): 0
-2025-10-29 17:22:28,047 - INFO - [Hemoprod_TO.xlsx] (Métrica) Colunas Removidas (A Mais): 1
-2025-10-29 17:22:28,047 - INFO - [Hemoprod_TO.xlsx]      -> ['URL de referência']
-2025-10-29 17:22:28,055 - INFO - [Hemoprod_TO.xlsx] Schema padronizado.
-2025-10-29 17:22:28,055 - INFO - [Hemoprod_TO.xlsx] (Métrica) Colunas Finais: 269
-2025-10-29 17:22:28,055 - WARNING - [Hemoprod_TO.xlsx] Coluna 'data_envio' não é datetime. Tentando converter para deduplicação.
-2025-10-29 17:22:28,069 - INFO - [Hemoprod_TO.xlsx] Deduplicação concluída.
-2025-10-29 17:22:28,069 - INFO - [Hemoprod_TO.xlsx] (Métrica) Linhas Finais (Pós-filtro): 193
-2025-10-29 17:22:28,928 - INFO - [Hemoprod_TO.xlsx] ✅ Processamento concluído. Salvo em: D:\Documentos\STTP\hemodata\hemodata\dados_processados\hemoprod_to.xlsx
-2025-10-29 17:22:28,930 - INFO - --- PROCESSAMENTO CONCLUÍDO ---
+2025-10-30 20:28:46,403 - INFO - 
+2025-10-30 20:28:46,403 - INFO - ################################################################################
+2025-10-30 20:28:46,403 - INFO - ### INÍCIO DO SCRIPT DE PROCESSAMENTO ETL ###
+2025-10-30 20:28:46,403 - INFO - ################################################################################
+2025-10-30 20:28:46,403 - INFO - 
+2025-10-30 20:28:46,403 - INFO - Total de arquivos a processar: 27
+2025-10-30 20:28:46,403 - INFO - 
+2025-10-30 20:28:46,403 - INFO - Carregando dicionário de D:\Documentos\STTP\hemoce\src\dicionario_colunas_269_COM_TIPOS.xlsx...
+2025-10-30 20:28:46,570 - INFO - Dicionário dicionario_colunas_269_COM_TIPOS.xlsx carregado com sucesso.
+2025-10-30 20:28:46,570 - INFO - ✓ Dicionário Principal: 270 colunas
+2025-10-30 20:28:46,570 - INFO - Carregando dicionário de D:\Documentos\STTP\hemoce\src\dicionario_colunas_269_all.xlsx...
+2025-10-30 20:28:46,588 - INFO - Dicionário dicionario_colunas_269_all.xlsx carregado com sucesso.
+2025-10-30 20:28:46,588 - INFO - ✓ Dicionário de Mapeamento: 273 mapeamentos
+2025-10-30 20:28:46,589 - INFO - 
+2025-10-30 20:28:46,589 - INFO - 
+================================================================================
+2025-10-30 20:28:46,589 - INFO - Processando arquivo 1/27: Hemoprod_AL.xlsx
+2025-10-30 20:28:46,589 - INFO - ================================================================================
+
+2025-10-30 20:28:47,640 - INFO - 
+================================================================================
+2025-10-30 20:28:47,640 - INFO - Processando arquivo 2/27: Hemoprod_AM.xlsx
+2025-10-30 20:28:47,640 - INFO - ================================================================================
+
+2025-10-30 20:28:47,954 - INFO - 
+================================================================================
+2025-10-30 20:28:47,954 - INFO - Processando arquivo 3/27: Hemoprod_AP.xlsx
+2025-10-30 20:28:47,955 - INFO - ================================================================================
+
+2025-10-30 20:28:48,159 - INFO - 
+================================================================================
+2025-10-30 20:28:48,159 - INFO - Processando arquivo 4/27: Hemoprod_BA.xlsx
+2025-10-30 20:28:48,159 - INFO - ================================================================================
+
+2025-10-30 20:28:50,469 - INFO - 
+================================================================================
+2025-10-30 20:28:50,469 - INFO - Processando arquivo 5/27: Hemoprod_CE.xlsx
+2025-10-30 20:28:50,469 - INFO - ================================================================================
+
+2025-10-30 20:28:51,176 - INFO - 
+================================================================================
+2025-10-30 20:28:51,176 - INFO - Processando arquivo 6/27: Hemoprod_DF.xlsx
+2025-10-30 20:28:51,176 - INFO - ================================================================================
+
+2025-10-30 20:28:51,912 - INFO - 
+================================================================================
+2025-10-30 20:28:51,912 - INFO - Processando arquivo 7/27: Hemoprod_ES.xlsx
+2025-10-30 20:28:51,912 - INFO - ================================================================================
+
+2025-10-30 20:28:56,743 - INFO - 
+================================================================================
+2025-10-30 20:28:56,743 - INFO - Processando arquivo 8/27: Hemoprod_GO.xlsx
+2025-10-30 20:28:56,743 - INFO - ================================================================================
+
+2025-10-30 20:28:58,368 - INFO - 
+================================================================================
+2025-10-30 20:28:58,368 - INFO - Processando arquivo 9/27: Hemoprod_Hemominas.xlsx
+2025-10-30 20:28:58,368 - INFO - ================================================================================
+
+2025-10-30 20:29:01,306 - INFO - 
+================================================================================
+2025-10-30 20:29:01,306 - INFO - Processando arquivo 10/27: Hemoprod_MA.xlsx
+2025-10-30 20:29:01,306 - INFO - ================================================================================
+
+2025-10-30 20:29:01,647 - INFO - 
+================================================================================
+2025-10-30 20:29:01,648 - INFO - Processando arquivo 11/27: Hemoprod_MG.xlsx
+2025-10-30 20:29:01,648 - INFO - ================================================================================
+
+2025-10-30 20:29:02,684 - INFO - 
+================================================================================
+2025-10-30 20:29:02,684 - INFO - Processando arquivo 12/27: Hemoprod_MS.xlsx
+2025-10-30 20:29:02,684 - INFO - ================================================================================
+
+2025-10-30 20:29:04,132 - INFO - 
+================================================================================
+2025-10-30 20:29:04,132 - INFO - Processando arquivo 13/27: Hemoprod_MT.xlsx
+2025-10-30 20:29:04,132 - INFO - ================================================================================
+
+2025-10-30 20:29:08,841 - INFO - 
+================================================================================
+2025-10-30 20:29:08,841 - INFO - Processando arquivo 14/27: Hemoprod_PA.xlsx
+2025-10-30 20:29:08,841 - INFO - ================================================================================
+
+2025-10-30 20:29:12,038 - INFO - 
+================================================================================
+2025-10-30 20:29:12,038 - INFO - Processando arquivo 15/27: Hemoprod_PB.xlsx
+2025-10-30 20:29:12,039 - INFO - ================================================================================
+
+2025-10-30 20:29:12,753 - INFO - 
+================================================================================
+2025-10-30 20:29:12,753 - INFO - Processando arquivo 16/27: Hemoprod_PE.xlsx
+2025-10-30 20:29:12,753 - INFO - ================================================================================
+
+2025-10-30 20:29:14,228 - INFO - 
+================================================================================
+2025-10-30 20:29:14,228 - INFO - Processando arquivo 17/27: Hemoprod_PI.xlsx
+2025-10-30 20:29:14,228 - INFO - ================================================================================
+
+2025-10-30 20:29:14,678 - INFO - 
+================================================================================
+2025-10-30 20:29:14,678 - INFO - Processando arquivo 18/27: Hemoprod_PR.xlsx
+2025-10-30 20:29:14,678 - INFO - ================================================================================
+
+2025-10-30 20:29:17,420 - INFO - 
+================================================================================
+2025-10-30 20:29:17,420 - INFO - Processando arquivo 19/27: Hemoprod_RJ.xlsx
+2025-10-30 20:29:17,420 - INFO - ================================================================================
+
+2025-10-30 20:29:17,701 - INFO - 
+================================================================================
+2025-10-30 20:29:17,701 - INFO - Processando arquivo 20/27: Hemoprod_RN.xlsx
+2025-10-30 20:29:17,701 - INFO - ================================================================================
+
+2025-10-30 20:29:18,151 - INFO - 
+================================================================================
+2025-10-30 20:29:18,151 - INFO - Processando arquivo 21/27: Hemoprod_RO.xlsx
+2025-10-30 20:29:18,151 - INFO - ================================================================================
+
+2025-10-30 20:29:19,684 - INFO - 
+================================================================================
+2025-10-30 20:29:19,685 - INFO - Processando arquivo 22/27: Hemoprod_RR.xlsx
+2025-10-30 20:29:19,685 - INFO - ================================================================================
+
+2025-10-30 20:29:19,978 - INFO - 
+================================================================================
+2025-10-30 20:29:19,978 - INFO - Processando arquivo 23/27: Hemoprod_RS.xlsx
+2025-10-30 20:29:19,979 - INFO - ================================================================================
+
+2025-10-30 20:29:31,065 - INFO - 
+================================================================================
+2025-10-30 20:29:31,065 - INFO - Processando arquivo 24/27: Hemoprod_SC.xlsx
+2025-10-30 20:29:31,065 - INFO - ================================================================================
+
+2025-10-30 20:29:33,281 - INFO - 
+================================================================================
+2025-10-30 20:29:33,281 - INFO - Processando arquivo 25/27: Hemoprod_SE.xlsx
+2025-10-30 20:29:33,282 - INFO - ================================================================================
+
+2025-10-30 20:29:35,872 - INFO - 
+================================================================================
+2025-10-30 20:29:35,872 - INFO - Processando arquivo 26/27: Hemoprod_SP.xlsx
+2025-10-30 20:29:35,872 - INFO - ================================================================================
+
+2025-10-30 20:29:36,124 - INFO - 
+================================================================================
+2025-10-30 20:29:36,124 - INFO - Processando arquivo 27/27: Hemoprod_TO.xlsx
+2025-10-30 20:29:36,125 - INFO - ================================================================================
+
+2025-10-30 20:29:36,927 - INFO - 
+2025-10-30 20:29:36,927 - INFO - ################################################################################
+2025-10-30 20:29:36,927 - INFO - ### PROCESSAMENTO CONCLUÍDO ###
+2025-10-30 20:29:36,927 - INFO - ################################################################################
+2025-10-30 20:29:36,927 - INFO - 

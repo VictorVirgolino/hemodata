@@ -1,0 +1,40 @@
+2025-10-30 20:28:47,955 - [INFO] - [hemoprod_ap.xlsx] - ============================================================
+2025-10-30 20:28:47,955 - [INFO] - [hemoprod_ap.xlsx] - INICIANDO PROCESSAMENTO: AP
+2025-10-30 20:28:47,956 - [INFO] - [hemoprod_ap.xlsx] - ============================================================
+2025-10-30 20:28:47,956 - [INFO] - [hemoprod_ap.xlsx] - Carregando arquivo: Hemoprod_AP.xlsx
+2025-10-30 20:28:47,956 - [INFO] - [hemoprod_ap.xlsx] - Planilha: HEMOPROD - AMAPA
+2025-10-30 20:28:47,968 - [INFO] - [hemoprod_ap.xlsx] - ✓ Colunas Originais: 269
+2025-10-30 20:28:47,968 - [INFO] - [hemoprod_ap.xlsx] - ✓ Linhas Originais: 1
+2025-10-30 20:28:47,968 - [INFO] - [hemoprod_ap.xlsx] - Iniciando limpeza e renomeação de colunas...
+2025-10-30 20:28:47,969 - [INFO] - [hemoprod_ap.xlsx] - ✓ Colunas limpas e renomeadas
+2025-10-30 20:28:47,969 - [INFO] - [hemoprod_ap.xlsx] - Normalizando período e ano de referência...
+2025-10-30 20:28:47,969 - [INFO] - [hemoprod_ap.xlsx] - ✓ Nenhum registro necessitou normalização de período/ano
+2025-10-30 20:28:47,969 - [INFO] - [hemoprod_ap.xlsx] - ✓ Período/Ano normalizado
+2025-10-30 20:28:47,969 - [INFO] - [hemoprod_ap.xlsx] - Normalizando município e estado...
+2025-10-30 20:28:47,969 - [INFO] - [hemoprod_ap.xlsx] - Coluna 'estado' não existe. Criando...
+2025-10-30 20:28:47,971 - [INFO] - [hemoprod_ap.xlsx] - ✓ Normalizados 1 registros com estado no município
+2025-10-30 20:28:47,971 - [INFO] - [hemoprod_ap.xlsx] - ✓ Município/Estado normalizado
+2025-10-30 20:28:47,971 - [INFO] - [hemoprod_ap.xlsx] - Aplicando tipos de dados...
+2025-10-30 20:28:48,009 - [INFO] - [hemoprod_ap.xlsx] - ✓ Tipos aplicados
+2025-10-30 20:28:48,010 - [INFO] - [hemoprod_ap.xlsx] - ✓ Colunas Faltantes: 1
+2025-10-30 20:28:48,010 - [INFO] - [hemoprod_ap.xlsx] -   → ['estado']
+2025-10-30 20:28:48,010 - [INFO] - [hemoprod_ap.xlsx] - ✓ Colunas A Mais: 0
+2025-10-30 20:28:48,010 - [INFO] - [hemoprod_ap.xlsx] - Padronizando schema...
+2025-10-30 20:28:48,010 - [INFO] - [hemoprod_ap.xlsx] - Coluna 'estado' já existe, mantendo valores atuais
+2025-10-30 20:28:48,012 - [INFO] - [hemoprod_ap.xlsx] - ✓ Schema padronizado - Colunas Finais: 270
+2025-10-30 20:28:48,012 - [INFO] - [hemoprod_ap.xlsx] - Preenchendo valores nulos em colunas Int64 com 0...
+2025-10-30 20:28:48,013 - [INFO] - [hemoprod_ap.xlsx] -   → Coluna 'identificacao_dado': 1 valores nulos preenchidos com 0
+2025-10-30 20:28:48,013 - [INFO] - [hemoprod_ap.xlsx] -   → Coluna 'identificacao_estabelecimento': 1 valores nulos preenchidos com 0
+2025-10-30 20:28:48,013 - [INFO] - [hemoprod_ap.xlsx] -   → Coluna 'cnes': 1 valores nulos preenchidos com 0
+2025-10-30 20:28:48,013 - [INFO] - [hemoprod_ap.xlsx] -   → Coluna 'endereco': 1 valores nulos preenchidos com 0
+2025-10-30 20:28:48,022 - [INFO] - [hemoprod_ap.xlsx] - ✓ 4 colunas Int64 preenchidas com 0
+2025-10-30 20:28:48,023 - [INFO] - [hemoprod_ap.xlsx] - Iniciando deduplicação...
+2025-10-30 20:28:48,023 - [INFO] - [hemoprod_ap.xlsx] - Convertendo 'data_envio' para datetime...
+2025-10-30 20:28:48,027 - [INFO] - [hemoprod_ap.xlsx] - ✓ Deduplicação concluída - Removidas 0 linhas duplicadas
+2025-10-30 20:28:48,028 - [INFO] - [hemoprod_ap.xlsx] - ✓ Linhas Finais: 1
+2025-10-30 20:28:48,028 - [INFO] - [hemoprod_ap.xlsx] - Salvando arquivo processado...
+2025-10-30 20:28:48,057 - [INFO] - [hemoprod_ap.xlsx] - ============================================================
+2025-10-30 20:28:48,057 - [INFO] - [hemoprod_ap.xlsx] - ✅ PROCESSAMENTO CONCLUÍDO COM SUCESSO
+2025-10-30 20:28:48,058 - [INFO] - [hemoprod_ap.xlsx] - ✅ Arquivo salvo em: D:\Documentos\STTP\hemoce\src\dados_processados\hemoprod_ap.xlsx
+2025-10-30 20:28:48,058 - [INFO] - [hemoprod_ap.xlsx] - ============================================================
+2025-10-30 20:28:48,058 - [INFO] - [hemoprod_ap.xlsx] - 

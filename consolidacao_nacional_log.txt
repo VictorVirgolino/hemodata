@@ -1,0 +1,221 @@
+2025-10-30 20:32:08,821 - INFO - ================================================================================
+2025-10-30 20:32:08,822 - INFO - INICIANDO CONSOLIDAÇÃO NACIONAL
+2025-10-30 20:32:08,822 - INFO - ================================================================================
+2025-10-30 20:32:08,822 - INFO - Encontrados 27 arquivos Excel para consolidar
+2025-10-30 20:32:08,822 - INFO - [1/27] Lendo: hemoprod_al.xlsx
+2025-10-30 20:32:09,386 - INFO -   ✓ 307 registros carregados
+2025-10-30 20:32:09,386 - INFO - [2/27] Lendo: hemoprod_am.xlsx
+2025-10-30 20:32:09,450 - INFO -   ✓ 32 registros carregados
+2025-10-30 20:32:09,451 - INFO - [3/27] Lendo: hemoprod_ap.xlsx
+2025-10-30 20:32:09,497 - INFO -   ✓ 1 registros carregados
+2025-10-30 20:32:09,497 - INFO - [4/27] Lendo: hemoprod_ba.xlsx
+2025-10-30 20:32:10,429 - INFO -   ✓ 708 registros carregados
+2025-10-30 20:32:10,429 - INFO - [5/27] Lendo: hemoprod_ce.xlsx
+2025-10-30 20:32:10,561 - INFO -   ✓ 66 registros carregados
+2025-10-30 20:32:10,561 - INFO - [6/27] Lendo: hemoprod_df.xlsx
+2025-10-30 20:32:10,817 - INFO -   ✓ 183 registros carregados
+2025-10-30 20:32:10,817 - INFO - [7/27] Lendo: hemoprod_es.xlsx
+2025-10-30 20:32:13,077 - INFO -   ✓ 1,744 registros carregados
+2025-10-30 20:32:13,077 - INFO - [8/27] Lendo: hemoprod_go.xlsx
+2025-10-30 20:32:13,703 - INFO -   ✓ 471 registros carregados
+2025-10-30 20:32:13,703 - INFO - [9/27] Lendo: hemoprod_hm.xlsx
+2025-10-30 20:32:14,892 - INFO -   ✓ 930 registros carregados
+2025-10-30 20:32:14,892 - INFO - [10/27] Lendo: hemoprod_ma.xlsx
+2025-10-30 20:32:14,979 - INFO -   ✓ 44 registros carregados
+2025-10-30 20:32:14,979 - INFO - [11/27] Lendo: hemoprod_mg.xlsx
+2025-10-30 20:32:15,348 - INFO -   ✓ 263 registros carregados
+2025-10-30 20:32:15,349 - INFO - [12/27] Lendo: hemoprod_ms.xlsx
+2025-10-30 20:32:15,905 - INFO -   ✓ 418 registros carregados
+2025-10-30 20:32:15,905 - INFO - [13/27] Lendo: hemoprod_mt.xlsx
+2025-10-30 20:32:17,965 - INFO -   ✓ 1,589 registros carregados
+2025-10-30 20:32:17,965 - INFO - [14/27] Lendo: hemoprod_pa.xlsx
+2025-10-30 20:32:19,365 - INFO -   ✓ 1,065 registros carregados
+2025-10-30 20:32:19,365 - INFO - [15/27] Lendo: hemoprod_pb.xlsx
+2025-10-30 20:32:19,608 - INFO -   ✓ 168 registros carregados
+2025-10-30 20:32:19,609 - INFO - [16/27] Lendo: hemoprod_pe.xlsx
+2025-10-30 20:32:20,183 - INFO -   ✓ 432 registros carregados
+2025-10-30 20:32:20,183 - INFO - [17/27] Lendo: hemoprod_pi.xlsx
+2025-10-30 20:32:20,316 - INFO -   ✓ 80 registros carregados
+2025-10-30 20:32:20,316 - INFO - [18/27] Lendo: hemoprod_pr.xlsx
+2025-10-30 20:32:21,409 - INFO -   ✓ 808 registros carregados
+2025-10-30 20:32:21,410 - INFO - [19/27] Lendo: hemoprod_rj.xlsx
+2025-10-30 20:32:21,451 - INFO -   ✓ 3 registros carregados
+2025-10-30 20:32:21,452 - INFO - [20/27] Lendo: hemoprod_rn.xlsx
+2025-10-30 20:32:21,597 - INFO -   ✓ 77 registros carregados
+2025-10-30 20:32:21,597 - INFO - [21/27] Lendo: hemoprod_ro.xlsx
+2025-10-30 20:32:22,263 - INFO -   ✓ 497 registros carregados
+2025-10-30 20:32:22,263 - INFO - [22/27] Lendo: hemoprod_rr.xlsx
+2025-10-30 20:32:22,323 - INFO -   ✓ 25 registros carregados
+2025-10-30 20:32:22,323 - INFO - [23/27] Lendo: hemoprod_rs.xlsx
+2025-10-30 20:32:27,805 - INFO -   ✓ 4,185 registros carregados
+2025-10-30 20:32:27,805 - INFO - [24/27] Lendo: hemoprod_sc.xlsx
+2025-10-30 20:32:28,706 - INFO -   ✓ 676 registros carregados
+2025-10-30 20:32:28,706 - INFO - [25/27] Lendo: hemoprod_se.xlsx
+2025-10-30 20:32:29,874 - INFO -   ✓ 891 registros carregados
+2025-10-30 20:32:29,874 - INFO - [26/27] Lendo: hemoprod_sp.xlsx
+2025-10-30 20:32:29,919 - INFO -   ✓ 9 registros carregados
+2025-10-30 20:32:29,919 - INFO - [27/27] Lendo: hemoprod_to.xlsx
+2025-10-30 20:32:30,185 - INFO -   ✓ 193 registros carregados
+2025-10-30 20:32:30,185 - INFO - 
+Consolidando dados...
+2025-10-30 20:32:30,202 - INFO - Total de registros consolidados: 15,865
+2025-10-30 20:32:30,202 - INFO - Total de colunas: 271
+2025-10-30 20:32:30,202 - INFO - 
+Salvando arquivo Parquet: D:\Documentos\STTP\hemoce\src\base_nacional.parquet
+2025-10-30 20:32:30,245 - ERROR - Erro na consolidação: ("Expected bytes, got a 'Timestamp' object", 'Conversion failed for column data_inicio with type object')
+Traceback (most recent call last):
+  File "D:\Documentos\STTP\hemoce\src\unir_dataframes.py", line 80, in consolidar_arquivos_excel
+    df_consolidado.to_parquet(
+  File "C:\Users\victo\anaconda3\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\victo\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3113, in to_parquet
+    return to_parquet(
+           ^^^^^^^^^^^
+  File "C:\Users\victo\anaconda3\Lib\site-packages\pandas\io\parquet.py", line 480, in to_parquet
+    impl.write(
+  File "C:\Users\victo\anaconda3\Lib\site-packages\pandas\io\parquet.py", line 190, in write
+    table = self.api.Table.from_pandas(df, **from_pandas_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\table.pxi", line 4525, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\victo\anaconda3\Lib\site-packages\pyarrow\pandas_compat.py", line 611, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\victo\anaconda3\Lib\site-packages\pyarrow\pandas_compat.py", line 598, in convert_column
+    raise e
+  File "C:\Users\victo\anaconda3\Lib\site-packages\pyarrow\pandas_compat.py", line 592, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\array.pxi", line 345, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 85, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 91, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'Timestamp' object", 'Conversion failed for column data_inicio with type object')
+2025-10-30 20:32:30,249 - ERROR - Erro fatal: ("Expected bytes, got a 'Timestamp' object", 'Conversion failed for column data_inicio with type object')
+2025-10-30 20:32:30,255 - INFO - 
+Tempo total de execução: 0:00:21.433521
+2025-10-30 20:49:25,596 - INFO - ================================================================================
+2025-10-30 20:49:25,596 - INFO - INICIANDO CONSOLIDAÇÃO NACIONAL
+2025-10-30 20:49:25,596 - INFO - ================================================================================
+2025-10-30 20:49:25,596 - INFO - Carregando dicionário de tipos: D:\Documentos\STTP\hemoce\src\dicionario_colunas_269_COM_TIPOS.xlsx
+2025-10-30 20:49:25,758 - INFO - ✓ Dicionário carregado: 270 colunas mapeadas
+2025-10-30 20:49:25,758 - INFO - Encontrados 27 arquivos Excel para consolidar
+2025-10-30 20:49:25,758 - INFO - [1/27] Lendo: hemoprod_al.xlsx
+2025-10-30 20:49:26,166 - INFO -   ✓ 307 registros carregados
+2025-10-30 20:49:26,166 - INFO - [2/27] Lendo: hemoprod_am.xlsx
+2025-10-30 20:49:26,229 - INFO -   ✓ 32 registros carregados
+2025-10-30 20:49:26,229 - INFO - [3/27] Lendo: hemoprod_ap.xlsx
+2025-10-30 20:49:26,239 - INFO -   ✓ 1 registros carregados
+2025-10-30 20:49:26,239 - INFO - [4/27] Lendo: hemoprod_ba.xlsx
+2025-10-30 20:49:27,182 - INFO -   ✓ 708 registros carregados
+2025-10-30 20:49:27,182 - INFO - [5/27] Lendo: hemoprod_ce.xlsx
+2025-10-30 20:49:27,286 - INFO -   ✓ 66 registros carregados
+2025-10-30 20:49:27,287 - INFO - [6/27] Lendo: hemoprod_df.xlsx
+2025-10-30 20:49:27,533 - INFO -   ✓ 183 registros carregados
+2025-10-30 20:49:27,533 - INFO - [7/27] Lendo: hemoprod_es.xlsx
+2025-10-30 20:49:29,858 - INFO -   ✓ 1,744 registros carregados
+2025-10-30 20:49:29,859 - INFO - [8/27] Lendo: hemoprod_go.xlsx
+2025-10-30 20:49:30,487 - INFO -   ✓ 471 registros carregados
+2025-10-30 20:49:30,487 - INFO - [9/27] Lendo: hemoprod_hm.xlsx
+2025-10-30 20:49:31,704 - INFO -   ✓ 930 registros carregados
+2025-10-30 20:49:31,704 - INFO - [10/27] Lendo: hemoprod_ma.xlsx
+2025-10-30 20:49:31,781 - INFO -   ✓ 44 registros carregados
+2025-10-30 20:49:31,781 - INFO - [11/27] Lendo: hemoprod_mg.xlsx
+2025-10-30 20:49:32,139 - INFO -   ✓ 263 registros carregados
+2025-10-30 20:49:32,139 - INFO - [12/27] Lendo: hemoprod_ms.xlsx
+2025-10-30 20:49:32,697 - INFO -   ✓ 418 registros carregados
+2025-10-30 20:49:32,697 - INFO - [13/27] Lendo: hemoprod_mt.xlsx
+2025-10-30 20:49:34,812 - INFO -   ✓ 1,589 registros carregados
+2025-10-30 20:49:34,812 - INFO - [14/27] Lendo: hemoprod_pa.xlsx
+2025-10-30 20:49:36,230 - INFO -   ✓ 1,065 registros carregados
+2025-10-30 20:49:36,230 - INFO - [15/27] Lendo: hemoprod_pb.xlsx
+2025-10-30 20:49:36,469 - INFO -   ✓ 168 registros carregados
+2025-10-30 20:49:36,469 - INFO - [16/27] Lendo: hemoprod_pe.xlsx
+2025-10-30 20:49:37,060 - INFO -   ✓ 432 registros carregados
+2025-10-30 20:49:37,060 - INFO - [17/27] Lendo: hemoprod_pi.xlsx
+2025-10-30 20:49:37,182 - INFO -   ✓ 80 registros carregados
+2025-10-30 20:49:37,182 - INFO - [18/27] Lendo: hemoprod_pr.xlsx
+2025-10-30 20:49:38,295 - INFO -   ✓ 808 registros carregados
+2025-10-30 20:49:38,295 - INFO - [19/27] Lendo: hemoprod_rj.xlsx
+2025-10-30 20:49:38,309 - INFO -   ✓ 3 registros carregados
+2025-10-30 20:49:38,309 - INFO - [20/27] Lendo: hemoprod_rn.xlsx
+2025-10-30 20:49:38,430 - INFO -   ✓ 77 registros carregados
+2025-10-30 20:49:38,430 - INFO - [21/27] Lendo: hemoprod_ro.xlsx
+2025-10-30 20:49:39,102 - INFO -   ✓ 497 registros carregados
+2025-10-30 20:49:39,102 - INFO - [22/27] Lendo: hemoprod_rr.xlsx
+2025-10-30 20:49:39,146 - INFO -   ✓ 25 registros carregados
+2025-10-30 20:49:39,146 - INFO - [23/27] Lendo: hemoprod_rs.xlsx
+2025-10-30 20:49:44,916 - INFO -   ✓ 4,185 registros carregados
+2025-10-30 20:49:44,917 - INFO - [24/27] Lendo: hemoprod_sc.xlsx
+2025-10-30 20:49:45,848 - INFO -   ✓ 676 registros carregados
+2025-10-30 20:49:45,848 - INFO - [25/27] Lendo: hemoprod_se.xlsx
+2025-10-30 20:49:47,172 - INFO -   ✓ 891 registros carregados
+2025-10-30 20:49:47,172 - INFO - [26/27] Lendo: hemoprod_sp.xlsx
+2025-10-30 20:49:47,206 - INFO -   ✓ 9 registros carregados
+2025-10-30 20:49:47,206 - INFO - [27/27] Lendo: hemoprod_to.xlsx
+2025-10-30 20:49:47,520 - INFO -   ✓ 193 registros carregados
+2025-10-30 20:49:47,521 - INFO - 
+Consolidando dados...
+2025-10-30 20:49:47,541 - INFO - Total de registros consolidados: 15,865
+2025-10-30 20:49:47,541 - INFO - Total de colunas: 271
+2025-10-30 20:49:47,541 - INFO - 
+Aplicando tipos corretos às colunas...
+2025-10-30 20:49:47,570 - INFO -   Convertidas 50 colunas...
+2025-10-30 20:49:47,582 - INFO -   Convertidas 100 colunas...
+2025-10-30 20:49:47,593 - INFO -   Convertidas 150 colunas...
+2025-10-30 20:49:47,603 - INFO -   Convertidas 200 colunas...
+2025-10-30 20:49:47,614 - INFO -   Convertidas 250 colunas...
+2025-10-30 20:49:47,619 - INFO - ✓ Conversão concluída:
+2025-10-30 20:49:47,619 - INFO -   - Colunas convertidas com sucesso: 270
+2025-10-30 20:49:47,620 - INFO -   - Colunas com erro: 0
+2025-10-30 20:49:47,620 - INFO - 
+Salvando arquivo Parquet: D:\Documentos\STTP\hemoce\src\base_nacional.parquet
+2025-10-30 20:49:47,817 - INFO - ✓ Arquivo salvo com sucesso!
+2025-10-30 20:49:47,817 - INFO -   Tamanho: 3.18 MB
+2025-10-30 20:49:47,817 - INFO -   Registros: 15,865
+2025-10-30 20:49:47,818 - INFO -   Colunas: 271
+2025-10-30 20:49:47,818 - INFO - 
+Resumo por arquivo de origem:
+2025-10-30 20:49:47,819 - INFO -   hemoprod_al: 307 registros
+2025-10-30 20:49:47,819 - INFO -   hemoprod_am: 32 registros
+2025-10-30 20:49:47,820 - INFO -   hemoprod_ap: 1 registros
+2025-10-30 20:49:47,820 - INFO -   hemoprod_ba: 708 registros
+2025-10-30 20:49:47,820 - INFO -   hemoprod_ce: 66 registros
+2025-10-30 20:49:47,820 - INFO -   hemoprod_df: 183 registros
+2025-10-30 20:49:47,820 - INFO -   hemoprod_es: 1,744 registros
+2025-10-30 20:49:47,820 - INFO -   hemoprod_go: 471 registros
+2025-10-30 20:49:47,820 - INFO -   hemoprod_hm: 930 registros
+2025-10-30 20:49:47,821 - INFO -   hemoprod_ma: 44 registros
+2025-10-30 20:49:47,821 - INFO -   hemoprod_mg: 263 registros
+2025-10-30 20:49:47,821 - INFO -   hemoprod_ms: 418 registros
+2025-10-30 20:49:47,821 - INFO -   hemoprod_mt: 1,589 registros
+2025-10-30 20:49:47,821 - INFO -   hemoprod_pa: 1,065 registros
+2025-10-30 20:49:47,821 - INFO -   hemoprod_pb: 168 registros
+2025-10-30 20:49:47,821 - INFO -   hemoprod_pe: 432 registros
+2025-10-30 20:49:47,821 - INFO -   hemoprod_pi: 80 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_pr: 808 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_rj: 3 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_rn: 77 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_ro: 497 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_rr: 25 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_rs: 4,185 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_sc: 676 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_se: 891 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_sp: 9 registros
+2025-10-30 20:49:47,822 - INFO -   hemoprod_to: 193 registros
+2025-10-30 20:49:47,822 - INFO - 
+Tipos de dados finais (amostra):
+2025-10-30 20:49:47,822 - INFO -   id: Int64
+2025-10-30 20:49:47,824 - INFO -   data_envio: string
+2025-10-30 20:49:47,824 - INFO -   ultima_pagina: Int64
+2025-10-30 20:49:47,824 - INFO -   idioma_inicial: string
+2025-10-30 20:49:47,824 - INFO -   semente: Int64
+2025-10-30 20:49:47,824 - INFO -   codigo_acesso: string
+2025-10-30 20:49:47,824 - INFO -   data_inicio: string
+2025-10-30 20:49:47,824 - INFO -   data_ultima_acao: string
+2025-10-30 20:49:47,824 - INFO -   ip: string
+2025-10-30 20:49:47,824 - INFO -   identificacao_dado: Int64
+2025-10-30 20:49:47,824 - INFO - ================================================================================
+2025-10-30 20:49:47,825 - INFO - CONSOLIDAÇÃO CONCLUÍDA COM SUCESSO!
+2025-10-30 20:49:47,825 - INFO - ================================================================================
+2025-10-30 20:49:47,835 - INFO - 
+Tempo total de execução: 0:00:22.239573

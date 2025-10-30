@@ -37,7 +37,7 @@ st.markdown(
 # Carregar dados
 @st.cache_data
 def load_data():
-    parquet_path = "dados_processados/hemoprod_nacional.parquet"
+    parquet_path = "dados_processados/base_nacional.parquet"
 
     # 1. Tenta carregar o arquivo Parquet (preferencial)
     if os.path.exists(parquet_path):

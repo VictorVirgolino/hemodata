@@ -1,0 +1,127 @@
+2025-10-30 20:29:01,306 - [INFO] - [hemoprod_ma.xlsx] - ============================================================
+2025-10-30 20:29:01,307 - [INFO] - [hemoprod_ma.xlsx] - INICIANDO PROCESSAMENTO: MA
+2025-10-30 20:29:01,307 - [INFO] - [hemoprod_ma.xlsx] - ============================================================
+2025-10-30 20:29:01,307 - [INFO] - [hemoprod_ma.xlsx] - Carregando arquivo: Hemoprod_MA.xlsx
+2025-10-30 20:29:01,307 - [INFO] - [hemoprod_ma.xlsx] - Planilha: HEMOPROD - MARANHAO
+2025-10-30 20:29:01,357 - [INFO] - [hemoprod_ma.xlsx] - ✓ Colunas Originais: 269
+2025-10-30 20:29:01,357 - [INFO] - [hemoprod_ma.xlsx] - ✓ Linhas Originais: 45
+2025-10-30 20:29:01,357 - [INFO] - [hemoprod_ma.xlsx] - Iniciando limpeza e renomeação de colunas...
+2025-10-30 20:29:01,357 - [INFO] - [hemoprod_ma.xlsx] - ✓ Colunas limpas e renomeadas
+2025-10-30 20:29:01,358 - [INFO] - [hemoprod_ma.xlsx] - Normalizando período e ano de referência...
+2025-10-30 20:29:01,358 - [INFO] - [hemoprod_ma.xlsx] - ✓ Nenhum registro necessitou normalização de período/ano
+2025-10-30 20:29:01,358 - [INFO] - [hemoprod_ma.xlsx] - ✓ Período/Ano normalizado
+2025-10-30 20:29:01,358 - [INFO] - [hemoprod_ma.xlsx] - Normalizando município e estado...
+2025-10-30 20:29:01,359 - [INFO] - [hemoprod_ma.xlsx] - Coluna 'estado' não existe. Criando...
+2025-10-30 20:29:01,360 - [INFO] - [hemoprod_ma.xlsx] - ✓ Normalizados 45 registros com estado no município
+2025-10-30 20:29:01,360 - [INFO] - [hemoprod_ma.xlsx] - ✓ Município/Estado normalizado
+2025-10-30 20:29:01,361 - [INFO] - [hemoprod_ma.xlsx] - Aplicando tipos de dados...
+2025-10-30 20:29:01,402 - [INFO] - [hemoprod_ma.xlsx] - ✓ Tipos aplicados
+2025-10-30 20:29:01,402 - [INFO] - [hemoprod_ma.xlsx] - ✓ Colunas Faltantes: 1
+2025-10-30 20:29:01,402 - [INFO] - [hemoprod_ma.xlsx] -   → ['estado']
+2025-10-30 20:29:01,402 - [INFO] - [hemoprod_ma.xlsx] - ✓ Colunas A Mais: 0
+2025-10-30 20:29:01,402 - [INFO] - [hemoprod_ma.xlsx] - Padronizando schema...
+2025-10-30 20:29:01,403 - [INFO] - [hemoprod_ma.xlsx] - Coluna 'estado' já existe, mantendo valores atuais
+2025-10-30 20:29:01,406 - [INFO] - [hemoprod_ma.xlsx] - ✓ Schema padronizado - Colunas Finais: 270
+2025-10-30 20:29:01,406 - [INFO] - [hemoprod_ma.xlsx] - Preenchendo valores nulos em colunas Int64 com 0...
+2025-10-30 20:29:01,408 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'semente': 7 valores nulos preenchidos com 0
+2025-10-30 20:29:01,408 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'identificacao_dado': 45 valores nulos preenchidos com 0
+2025-10-30 20:29:01,409 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'identificacao_estabelecimento': 45 valores nulos preenchidos com 0
+2025-10-30 20:29:01,409 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'cnes': 45 valores nulos preenchidos com 0
+2025-10-30 20:29:01,410 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'endereco': 45 valores nulos preenchidos com 0
+2025-10-30 20:29:01,410 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'triagem_clinica_total_doacao_espontanea_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,410 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'triagem_clinica_total_doacao_espontanea_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,411 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'triagem_clinica_total_doacao_reposicao_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,411 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'triagem_clinica_total_doacao_reposicao_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,411 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'triagem_clinica_total_doacao_autologa_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,411 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'triagem_clinica_total_doacao_autologa_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,412 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_primeira_vez_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,412 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_primeira_vez_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,413 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_repeticao_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,413 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_repeticao_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,413 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_esporadico_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,413 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_esporadico_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,415 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_masculino_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,415 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_masculino_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,415 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_feminino_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,416 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_feminino_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,416 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_menor_de_18_anos_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,417 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_menor_de_18_anos_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,417 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_18_ate_29_anos_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,417 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_18_ate_29_anos_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,418 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_acima_de_29_anos_aptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,419 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_doador_acima_de_29_anos_inaptos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,419 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_anemia_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,420 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_anemia_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,420 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_anemia_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,420 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_hipertensao_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,421 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_hipertensao_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,421 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_hipertensao_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,422 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_hipotensao_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,422 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_hipotensao_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,422 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_hipotensao_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,423 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_alcoolismo_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,423 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_alcoolismo_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,423 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_alcoolismo_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,424 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_comportamento_risco_dst_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,424 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_comportamento_risco_dst_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,424 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_comportamento_risco_dst_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,424 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_uso_drogas_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,424 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_uso_drogas_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,425 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_uso_drogas_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,425 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_hepatite_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,425 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_hepatite_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,425 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_hepatite_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,426 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_doenca_chagas_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,426 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_doenca_chagas_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,427 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_doenca_chagas_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,427 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_malaria_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,427 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_malaria_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,427 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_malaria_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,427 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_outras_masculino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,428 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_outras_feminino': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,428 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_candidatos_inaptos_outras_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,428 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'coleta_total_candidatos_desistentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,429 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_interrupcoes_coleta_dificuldade_puncao_venosa': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,429 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_interrupcoes_coleta_reacao_vagal': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,430 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_interrupcoes_coleta_outros_motivos': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,430 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_coletas_sangue_total': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,430 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'total_coletas_aferese': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,430 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_doenca_chagas_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,431 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_doenca_chagas_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,431 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hiv_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,431 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hiv_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,432 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_sifilis_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,432 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna '`exames_triagem_doenca_sifilis_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,432 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_b_hbs_ag_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,432 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_b_hbs_ag_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,433 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_b_anti_hbc_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,433 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_b_anti_hbc_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,433 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_c_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,433 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_c_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,434 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_htlv_i_ii_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,434 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_htlv_i_ii_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,434 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_malaria_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,434 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_malaria_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,435 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hbv_teste_nat_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,435 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hbv_teste_nat_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,435 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hcv_teste_nat_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,435 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hcv_teste_nat_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,435 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hiv_teste_nat_amostras_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,435 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'exames_triagem_doenca_hiv_teste_nat_amostras_reagentes': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,436 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'outros_tipos_pesquisa_pesquisa_hbs_doador': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,437 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'inaptidao_triagem_laboratorial_total_bolsas_testadas': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,437 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'inaptidao_triagem_laboratorial_total_bolsas_reagentes_1_ou_mais_marcadores': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,437 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'descarte_bolsas_total_bolsas_descartadas_auto_exclusao': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,442 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'envio_plasma_producao_hemoderivados_plasma_fresco_congelado': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,442 - [INFO] - [hemoprod_ma.xlsx] -   → Coluna 'envio_plasma_producao_hemoderivados_plasma_comum': 44 valores nulos preenchidos com 0
+2025-10-30 20:29:01,443 - [INFO] - [hemoprod_ma.xlsx] - ✓ 91 colunas Int64 preenchidas com 0
+2025-10-30 20:29:01,443 - [INFO] - [hemoprod_ma.xlsx] - Iniciando deduplicação...
+2025-10-30 20:29:01,443 - [INFO] - [hemoprod_ma.xlsx] - Convertendo 'data_envio' para datetime...
+2025-10-30 20:29:01,449 - [INFO] - [hemoprod_ma.xlsx] - ✓ Deduplicação concluída - Removidas 1 linhas duplicadas
+2025-10-30 20:29:01,449 - [INFO] - [hemoprod_ma.xlsx] - ✓ Linhas Finais: 44
+2025-10-30 20:29:01,449 - [INFO] - [hemoprod_ma.xlsx] - Salvando arquivo processado...
+2025-10-30 20:29:01,545 - [INFO] - [hemoprod_ma.xlsx] - ============================================================
+2025-10-30 20:29:01,545 - [INFO] - [hemoprod_ma.xlsx] - ✅ PROCESSAMENTO CONCLUÍDO COM SUCESSO
+2025-10-30 20:29:01,545 - [INFO] - [hemoprod_ma.xlsx] - ✅ Arquivo salvo em: D:\Documentos\STTP\hemoce\src\dados_processados\hemoprod_ma.xlsx
+2025-10-30 20:29:01,546 - [INFO] - [hemoprod_ma.xlsx] - ============================================================
+2025-10-30 20:29:01,546 - [INFO] - [hemoprod_ma.xlsx] - 

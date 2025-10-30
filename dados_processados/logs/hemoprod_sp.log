@@ -1,0 +1,89 @@
+2025-10-30 20:29:35,873 - [INFO] - [hemoprod_sp.xlsx] - ============================================================
+2025-10-30 20:29:35,874 - [INFO] - [hemoprod_sp.xlsx] - INICIANDO PROCESSAMENTO: SP
+2025-10-30 20:29:35,874 - [INFO] - [hemoprod_sp.xlsx] - ============================================================
+2025-10-30 20:29:35,874 - [INFO] - [hemoprod_sp.xlsx] - Carregando arquivo: Hemoprod_SP.xlsx
+2025-10-30 20:29:35,875 - [INFO] - [hemoprod_sp.xlsx] - Planilha: Hemoprod_SP
+2025-10-30 20:29:35,898 - [INFO] - [hemoprod_sp.xlsx] - ✓ Colunas Originais: 270
+2025-10-30 20:29:35,898 - [INFO] - [hemoprod_sp.xlsx] - ✓ Linhas Originais: 9
+2025-10-30 20:29:35,898 - [INFO] - [hemoprod_sp.xlsx] - Iniciando limpeza e renomeação de colunas...
+2025-10-30 20:29:35,899 - [INFO] - [hemoprod_sp.xlsx] - ✓ Colunas limpas e renomeadas
+2025-10-30 20:29:35,899 - [INFO] - [hemoprod_sp.xlsx] - Normalizando período e ano de referência...
+2025-10-30 20:29:35,899 - [INFO] - [hemoprod_sp.xlsx] - ✓ Nenhum registro necessitou normalização de período/ano
+2025-10-30 20:29:35,899 - [INFO] - [hemoprod_sp.xlsx] - ✓ Período/Ano normalizado
+2025-10-30 20:29:35,899 - [INFO] - [hemoprod_sp.xlsx] - Normalizando município e estado...
+2025-10-30 20:29:35,899 - [INFO] - [hemoprod_sp.xlsx] - Coluna 'estado' não existe. Criando...
+2025-10-30 20:29:35,900 - [INFO] - [hemoprod_sp.xlsx] - ✓ Normalizados 9 registros com estado no município
+2025-10-30 20:29:35,901 - [INFO] - [hemoprod_sp.xlsx] - ✓ Município/Estado normalizado
+2025-10-30 20:29:35,901 - [INFO] - [hemoprod_sp.xlsx] - Aplicando tipos de dados...
+2025-10-30 20:29:35,937 - [INFO] - [hemoprod_sp.xlsx] - ✓ Tipos aplicados
+2025-10-30 20:29:35,937 - [INFO] - [hemoprod_sp.xlsx] - ✓ Colunas Faltantes: 1
+2025-10-30 20:29:35,938 - [INFO] - [hemoprod_sp.xlsx] -   → ['estado']
+2025-10-30 20:29:35,938 - [INFO] - [hemoprod_sp.xlsx] - ✓ Colunas A Mais: 1
+2025-10-30 20:29:35,938 - [INFO] - [hemoprod_sp.xlsx] -   → ['URL de referência']
+2025-10-30 20:29:35,938 - [INFO] - [hemoprod_sp.xlsx] - Padronizando schema...
+2025-10-30 20:29:35,939 - [INFO] - [hemoprod_sp.xlsx] - Coluna 'estado' já existe, mantendo valores atuais
+2025-10-30 20:29:35,941 - [INFO] - [hemoprod_sp.xlsx] - ✓ Schema padronizado - Colunas Finais: 270
+2025-10-30 20:29:35,941 - [INFO] - [hemoprod_sp.xlsx] - Preenchendo valores nulos em colunas Int64 com 0...
+2025-10-30 20:29:35,941 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'id': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,942 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'ultima_pagina': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,942 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'semente': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,942 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'identificacao_dado': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,942 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'identificacao_estabelecimento': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,943 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'cnpj': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,943 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'cnes': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,943 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'endereco': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,946 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'imunohematologia_pesquisa_anticorpo_irregular_positivo_doador': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,946 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'imunohematologia_pesquisa_anticorpo_irregular_positivo_receptor': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,948 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_leucocitos_produzidas': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,948 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_leucocitos_recebidas': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,948 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_leucocitos_devolvidas': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,949 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'perdas_concentrado_de_leucocitos_rompimento_de_bolsa': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,950 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'perdas_concentrado_de_leucocitos_validade': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,950 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'perdas_concentrado_de_leucocitos_outros_motivos': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,950 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'tranfusoes_plasma_comum_ambulatorial': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,950 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'tranfusoes_plasma_comum_hospitalar': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,951 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'tranfusoes_plasma_comum_total': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,951 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'tranfusoes_concentrado_de_leucocitos_ambulatorial': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,951 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'tranfusoes_concentrado_de_leucocitos_hospitalar': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,951 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'tranfusoes_concentrado_de_leucocitos_total': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,951 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_sangue_total_sem_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,953 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_sangue_total_com_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,953 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_fresco_congelado_sem_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,953 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_fresco_congelado_com_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,953 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_comum_sem_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,953 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_comum_com_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,954 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_sem_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,954 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_com_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,954 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_sem_buffy_coat_sem_exame_pre_transfusi': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,955 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_sem_buffy_coat_com_exame_pre_transfusi': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,955 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_sem_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,955 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_com_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,956 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_sem_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,956 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_com_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,956 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_leucocitos_sem_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,956 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_leucocitos_com_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,957 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_leucocitos_total': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,957 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_crioprecipitado_sem_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,957 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_crioprecipitado_com_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,957 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_sem_buffy_coat_sem_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,957 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_sem_buffy_coat_com_exame_pre_transfusional': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,958 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'reacoes_transfusionais_reacao_febril_nao_hemolitica': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,958 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'reacoes_transfusionais_reacao_hemolitica': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,958 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'reacoes_transfusionais_reacao_alergica': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,958 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'reacoes_transfusionais_choque_bacteriano': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,958 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'reacoes_transfusionais_alteracoes_metabolicas': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,959 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'reacoes_transfusionais_sobrecarga_volemica': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,959 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'reacoes_transfusionais_outras_reacoes': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,959 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'envio_plasma_producao_hemoderivados_plasma_fresco_congelado': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,959 - [INFO] - [hemoprod_sp.xlsx] -   → Coluna 'envio_plasma_producao_hemoderivados_plasma_comum': 9 valores nulos preenchidos com 0
+2025-10-30 20:29:35,959 - [INFO] - [hemoprod_sp.xlsx] - ✓ 52 colunas Int64 preenchidas com 0
+2025-10-30 20:29:35,959 - [INFO] - [hemoprod_sp.xlsx] - Iniciando deduplicação...
+2025-10-30 20:29:35,959 - [INFO] - [hemoprod_sp.xlsx] - Convertendo 'data_envio' para datetime...
+2025-10-30 20:29:35,964 - [INFO] - [hemoprod_sp.xlsx] - ✓ Deduplicação concluída - Removidas 0 linhas duplicadas
+2025-10-30 20:29:35,964 - [INFO] - [hemoprod_sp.xlsx] - ✓ Linhas Finais: 9
+2025-10-30 20:29:35,964 - [INFO] - [hemoprod_sp.xlsx] - Salvando arquivo processado...
+2025-10-30 20:29:36,023 - [INFO] - [hemoprod_sp.xlsx] - ============================================================
+2025-10-30 20:29:36,023 - [INFO] - [hemoprod_sp.xlsx] - ✅ PROCESSAMENTO CONCLUÍDO COM SUCESSO
+2025-10-30 20:29:36,023 - [INFO] - [hemoprod_sp.xlsx] - ✅ Arquivo salvo em: D:\Documentos\STTP\hemoce\src\dados_processados\hemoprod_sp.xlsx
+2025-10-30 20:29:36,023 - [INFO] - [hemoprod_sp.xlsx] - ============================================================
+2025-10-30 20:29:36,023 - [INFO] - [hemoprod_sp.xlsx] - 

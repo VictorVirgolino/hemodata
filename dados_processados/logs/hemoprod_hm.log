@@ -1,0 +1,57 @@
+2025-10-30 20:28:58,368 - [INFO] - [hemoprod_hm.xlsx] - ============================================================
+2025-10-30 20:28:58,368 - [INFO] - [hemoprod_hm.xlsx] - INICIANDO PROCESSAMENTO: HM
+2025-10-30 20:28:58,368 - [INFO] - [hemoprod_hm.xlsx] - ============================================================
+2025-10-30 20:28:58,369 - [INFO] - [hemoprod_hm.xlsx] - Carregando arquivo: Hemoprod_Hemominas.xlsx
+2025-10-30 20:28:58,369 - [INFO] - [hemoprod_hm.xlsx] - Planilha: HEMOPROD - HEMOMINAS
+2025-10-30 20:28:59,440 - [INFO] - [hemoprod_hm.xlsx] - ✓ Colunas Originais: 270
+2025-10-30 20:28:59,440 - [INFO] - [hemoprod_hm.xlsx] - ✓ Linhas Originais: 930
+2025-10-30 20:28:59,440 - [INFO] - [hemoprod_hm.xlsx] - Iniciando limpeza e renomeação de colunas...
+2025-10-30 20:28:59,440 - [INFO] - [hemoprod_hm.xlsx] - ✓ Colunas limpas e renomeadas
+2025-10-30 20:28:59,441 - [INFO] - [hemoprod_hm.xlsx] - Normalizando período e ano de referência...
+2025-10-30 20:28:59,442 - [INFO] - [hemoprod_hm.xlsx] - ✓ Nenhum registro necessitou normalização de período/ano
+2025-10-30 20:28:59,442 - [INFO] - [hemoprod_hm.xlsx] - ✓ Período/Ano normalizado
+2025-10-30 20:28:59,442 - [INFO] - [hemoprod_hm.xlsx] - Normalizando município e estado...
+2025-10-30 20:28:59,442 - [INFO] - [hemoprod_hm.xlsx] - Coluna 'estado' não existe. Criando...
+2025-10-30 20:28:59,471 - [INFO] - [hemoprod_hm.xlsx] - ✓ Normalizados 930 registros com estado no município
+2025-10-30 20:28:59,471 - [INFO] - [hemoprod_hm.xlsx] - ✓ Município/Estado normalizado
+2025-10-30 20:28:59,471 - [INFO] - [hemoprod_hm.xlsx] - Aplicando tipos de dados...
+2025-10-30 20:28:59,517 - [INFO] - [hemoprod_hm.xlsx] - ✓ Tipos aplicados
+2025-10-30 20:28:59,517 - [INFO] - [hemoprod_hm.xlsx] - ✓ Colunas Faltantes: 1
+2025-10-30 20:28:59,517 - [INFO] - [hemoprod_hm.xlsx] -   → ['estado']
+2025-10-30 20:28:59,517 - [INFO] - [hemoprod_hm.xlsx] - ✓ Colunas A Mais: 1
+2025-10-30 20:28:59,517 - [INFO] - [hemoprod_hm.xlsx] -   → ['Município [Outros]']
+2025-10-30 20:28:59,517 - [INFO] - [hemoprod_hm.xlsx] - Padronizando schema...
+2025-10-30 20:28:59,520 - [INFO] - [hemoprod_hm.xlsx] - Coluna 'estado' já existe, mantendo valores atuais
+2025-10-30 20:28:59,522 - [INFO] - [hemoprod_hm.xlsx] - ✓ Schema padronizado - Colunas Finais: 270
+2025-10-30 20:28:59,522 - [INFO] - [hemoprod_hm.xlsx] - Preenchendo valores nulos em colunas Int64 com 0...
+2025-10-30 20:28:59,522 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'id': 930 valores nulos preenchidos com 0
+2025-10-30 20:28:59,523 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'ultima_pagina': 930 valores nulos preenchidos com 0
+2025-10-30 20:28:59,523 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'semente': 930 valores nulos preenchidos com 0
+2025-10-30 20:28:59,523 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'identificacao_dado': 930 valores nulos preenchidos com 0
+2025-10-30 20:28:59,523 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'identificacao_estabelecimento': 930 valores nulos preenchidos com 0
+2025-10-30 20:28:59,523 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'cnpj': 930 valores nulos preenchidos com 0
+2025-10-30 20:28:59,524 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'cnes': 6 valores nulos preenchidos com 0
+2025-10-30 20:28:59,524 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'endereco': 930 valores nulos preenchidos com 0
+2025-10-30 20:28:59,530 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_produzidas': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,530 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_recebidas': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,531 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_devolvidas': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,532 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_de_aferese_rompimento_de_bolsa': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,532 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_de_aferese_validade': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,533 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_de_aferese_outros_motivos': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,534 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_de_aferese_ambulatorial': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,534 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_de_aferese_hospitalar': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,534 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_de_aferese_total': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,535 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_sem_exame_pre_transfusional': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,535 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_com_exame_pre_transfusional': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,536 - [INFO] - [hemoprod_hm.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_total': 588 valores nulos preenchidos com 0
+2025-10-30 20:28:59,536 - [INFO] - [hemoprod_hm.xlsx] - ✓ 20 colunas Int64 preenchidas com 0
+2025-10-30 20:28:59,536 - [INFO] - [hemoprod_hm.xlsx] - Iniciando deduplicação...
+2025-10-30 20:28:59,537 - [INFO] - [hemoprod_hm.xlsx] - Convertendo 'data_envio' para datetime...
+2025-10-30 20:28:59,543 - [INFO] - [hemoprod_hm.xlsx] - ✓ Deduplicação concluída - Removidas 0 linhas duplicadas
+2025-10-30 20:28:59,543 - [INFO] - [hemoprod_hm.xlsx] - ✓ Linhas Finais: 930
+2025-10-30 20:28:59,543 - [INFO] - [hemoprod_hm.xlsx] - Salvando arquivo processado...
+2025-10-30 20:29:01,203 - [INFO] - [hemoprod_hm.xlsx] - ============================================================
+2025-10-30 20:29:01,203 - [INFO] - [hemoprod_hm.xlsx] - ✅ PROCESSAMENTO CONCLUÍDO COM SUCESSO
+2025-10-30 20:29:01,203 - [INFO] - [hemoprod_hm.xlsx] - ✅ Arquivo salvo em: D:\Documentos\STTP\hemoce\src\dados_processados\hemoprod_hm.xlsx
+2025-10-30 20:29:01,203 - [INFO] - [hemoprod_hm.xlsx] - ============================================================
+2025-10-30 20:29:01,203 - [INFO] - [hemoprod_hm.xlsx] - 

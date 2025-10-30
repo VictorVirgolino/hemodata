@@ -1,0 +1,283 @@
+2025-10-30 20:28:48,160 - [INFO] - [hemoprod_ba.xlsx] - ============================================================
+2025-10-30 20:28:48,161 - [INFO] - [hemoprod_ba.xlsx] - INICIANDO PROCESSAMENTO: BA
+2025-10-30 20:28:48,161 - [INFO] - [hemoprod_ba.xlsx] - ============================================================
+2025-10-30 20:28:48,161 - [INFO] - [hemoprod_ba.xlsx] - Carregando arquivo: Hemoprod_BA.xlsx
+2025-10-30 20:28:48,161 - [INFO] - [hemoprod_ba.xlsx] - Planilha: HEMOPROD - BAHIA
+2025-10-30 20:28:48,974 - [INFO] - [hemoprod_ba.xlsx] - ✓ Colunas Originais: 269
+2025-10-30 20:28:48,975 - [INFO] - [hemoprod_ba.xlsx] - ✓ Linhas Originais: 975
+2025-10-30 20:28:48,975 - [INFO] - [hemoprod_ba.xlsx] - Iniciando limpeza e renomeação de colunas...
+2025-10-30 20:28:48,975 - [INFO] - [hemoprod_ba.xlsx] - ✓ Colunas limpas e renomeadas
+2025-10-30 20:28:48,975 - [INFO] - [hemoprod_ba.xlsx] - Normalizando período e ano de referência...
+2025-10-30 20:28:48,978 - [INFO] - [hemoprod_ba.xlsx] - ✓ Nenhum registro necessitou normalização de período/ano
+2025-10-30 20:28:48,978 - [INFO] - [hemoprod_ba.xlsx] - ✓ Período/Ano normalizado
+2025-10-30 20:28:48,978 - [INFO] - [hemoprod_ba.xlsx] - Normalizando município e estado...
+2025-10-30 20:28:48,978 - [INFO] - [hemoprod_ba.xlsx] - Coluna 'estado' não existe. Criando...
+2025-10-30 20:28:49,006 - [INFO] - [hemoprod_ba.xlsx] - ✓ Normalizados 975 registros com estado no município
+2025-10-30 20:28:49,006 - [INFO] - [hemoprod_ba.xlsx] - ✓ Município/Estado normalizado
+2025-10-30 20:28:49,006 - [INFO] - [hemoprod_ba.xlsx] - Aplicando tipos de dados...
+2025-10-30 20:28:49,080 - [INFO] - [hemoprod_ba.xlsx] - ✓ Tipos aplicados
+2025-10-30 20:28:49,080 - [INFO] - [hemoprod_ba.xlsx] - ✓ Colunas Faltantes: 1
+2025-10-30 20:28:49,080 - [INFO] - [hemoprod_ba.xlsx] -   → ['estado']
+2025-10-30 20:28:49,080 - [INFO] - [hemoprod_ba.xlsx] - ✓ Colunas A Mais: 0
+2025-10-30 20:28:49,080 - [INFO] - [hemoprod_ba.xlsx] - Padronizando schema...
+2025-10-30 20:28:49,080 - [INFO] - [hemoprod_ba.xlsx] - Coluna 'estado' já existe, mantendo valores atuais
+2025-10-30 20:28:49,083 - [INFO] - [hemoprod_ba.xlsx] - ✓ Schema padronizado - Colunas Finais: 270
+2025-10-30 20:28:49,083 - [INFO] - [hemoprod_ba.xlsx] - Preenchendo valores nulos em colunas Int64 com 0...
+2025-10-30 20:28:49,083 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'semente': 52 valores nulos preenchidos com 0
+2025-10-30 20:28:49,083 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'identificacao_dado': 975 valores nulos preenchidos com 0
+2025-10-30 20:28:49,083 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'identificacao_estabelecimento': 975 valores nulos preenchidos com 0
+2025-10-30 20:28:49,083 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'cnes': 975 valores nulos preenchidos com 0
+2025-10-30 20:28:49,085 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'endereco': 975 valores nulos preenchidos com 0
+2025-10-30 20:28:49,085 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'triagem_clinica_total_doacao_espontanea_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,085 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'triagem_clinica_total_doacao_espontanea_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,085 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'triagem_clinica_total_doacao_reposicao_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,085 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'triagem_clinica_total_doacao_reposicao_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,085 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'triagem_clinica_total_doacao_autologa_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,085 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'triagem_clinica_total_doacao_autologa_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,086 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_primeira_vez_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,086 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_primeira_vez_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,087 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_repeticao_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,087 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_repeticao_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,087 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_esporadico_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,087 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_esporadico_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,088 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_masculino_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,088 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_masculino_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,088 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_feminino_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,088 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_feminino_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,088 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_menor_de_18_anos_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,089 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_menor_de_18_anos_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,089 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_18_ate_29_anos_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,089 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_18_ate_29_anos_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,089 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_acima_de_29_anos_aptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,089 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_doador_acima_de_29_anos_inaptos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,090 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_anemia_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,090 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_anemia_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,090 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_anemia_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,090 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_hipertensao_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,090 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_hipertensao_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,090 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_hipertensao_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,090 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_hipotensao_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,091 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_hipotensao_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,091 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_hipotensao_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,091 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_alcoolismo_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,091 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_alcoolismo_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,091 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_alcoolismo_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,092 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_comportamento_risco_dst_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,092 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_comportamento_risco_dst_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,092 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_comportamento_risco_dst_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,092 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_uso_drogas_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,092 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_uso_drogas_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,092 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_uso_drogas_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,093 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_hepatite_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,093 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_hepatite_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,093 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_hepatite_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,093 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_doenca_chagas_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,093 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_doenca_chagas_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,093 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_doenca_chagas_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,093 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_malaria_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,095 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_malaria_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,095 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_malaria_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,095 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_outras_masculino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,095 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_outras_feminino': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,095 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_candidatos_inaptos_outras_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,095 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'coleta_total_candidatos_desistentes': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,096 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_interrupcoes_coleta_dificuldade_puncao_venosa': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,096 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_interrupcoes_coleta_reacao_vagal': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,096 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_interrupcoes_coleta_outros_motivos': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,096 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_coletas_sangue_total': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,096 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'total_coletas_aferese': 442 valores nulos preenchidos com 0
+2025-10-30 20:28:49,097 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_doenca_chagas_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,097 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_doenca_chagas_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,097 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hiv_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,097 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hiv_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,097 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_sifilis_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,098 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna '`exames_triagem_doenca_sifilis_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,098 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_b_hbs_ag_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,098 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_b_hbs_ag_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,098 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_b_anti_hbc_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,098 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_b_anti_hbc_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,098 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_c_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,099 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hepatite_c_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,099 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_htlv_i_ii_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,099 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_htlv_i_ii_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,099 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_malaria_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,099 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_malaria_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,100 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hbv_teste_nat_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,100 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hbv_teste_nat_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,100 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hcv_teste_nat_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,100 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hcv_teste_nat_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,101 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hiv_teste_nat_amostras_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,101 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'exames_triagem_doenca_hiv_teste_nat_amostras_reagentes': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,101 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_a_positivo_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,101 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_a_positivo_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,101 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_b_positivo_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,102 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_b_positivo_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,102 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_ab_positivo_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,102 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_ab_positivo_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,102 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_o_positivo_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,102 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_o_positivo_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,102 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_a_negativo_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,103 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_a_negativo_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,103 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_b_negativo_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,103 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_b_negativo_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,103 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_ab_negativo_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,103 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_ab_negativo_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,104 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_o_negativo_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,104 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_o_negativo_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,104 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_dfraco_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,104 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_dfraco_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,104 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_pesquisa_anticorpo_irregular_positivo_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,104 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_pesquisa_anticorpo_irregular_positivo_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,104 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_fenotipagem_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,105 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_fenotipagem_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,105 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_combs_direto_doador': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,105 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'imunohematologia_combs_direto_receptor': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,105 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'outros_tipos_pesquisa_pesquisa_hbs_doador': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,105 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'inaptidao_triagem_laboratorial_total_bolsas_testadas': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,105 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'inaptidao_triagem_laboratorial_total_bolsas_reagentes_1_ou_mais_marcadores': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,105 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'descarte_bolsas_total_bolsas_descartadas_auto_exclusao': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,105 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_sangue_total_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,107 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_sangue_total_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,107 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_sangue_total_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,107 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_plasma_fresco_congelado_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,107 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_plasma_fresco_congelado_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,107 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_plasma_fresco_congelado_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,108 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_plasma_comum_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,108 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_plasma_comum_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,108 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_plasma_comum_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,108 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_hemacias_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,108 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_hemacias_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,108 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_hemacias_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,108 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_hemacias_sem_buffy_coat_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,109 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_hemacias_sem_buffy_coat_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,109 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_hemacias_sem_buffy_coat_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,109 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_plaquetas_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,109 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_plaquetas_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,109 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_plaquetas_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,109 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,110 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,110 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_plaquetas_aferese_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,110 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_leucocitos_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,110 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_leucocitos_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,110 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_leucocitos_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,111 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_crioprecipitado_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,111 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_crioprecipitado_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,111 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_crioprecipitado_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,111 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_de_plaquetas_sem_buffy_coat_produzidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,112 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_de_plaquetas_sem_buffy_coat_recebidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,112 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'producao_hemoterapica_entradas_concentrado_de_plaquetas_sem_buffy_coat_devolvidas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,112 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_sangue_total_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,112 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_sangue_total_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,113 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_sangue_total_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,113 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_plasma_fresco_congelado_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,113 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_plasma_fresco_congelado_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,113 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_plasma_fresco_congelado_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,113 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_plasma_comum_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,113 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_plasma_comum_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,113 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_plasma_comum_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,113 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_hemacias_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,113 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_hemacias_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,115 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_hemacias_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,115 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_hemacias_sem_buffy_coat_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,115 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_hemacias_sem_buffy_coat_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,115 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_hemacias_sem_buffy_coat_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,115 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,116 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,116 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,116 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_de_aferese_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,116 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_de_aferese_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,116 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_de_aferese_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,117 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_leucocitos_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,117 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_leucocitos_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,117 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_leucocitos_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,117 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_crioprecipitado_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,117 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_crioprecipitado_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,118 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_crioprecipitado_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,118 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_sem_buffy_coat_rompimento_de_bolsa': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,118 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_sem_buffy_coat_validade': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,118 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'perdas_concentrado_de_plaquetas_sem_buffy_coat_outros_motivos': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,118 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_sangue_total_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,119 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_sangue_total_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,119 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_sangue_total_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,119 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_plasma_fresco_congelado_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,119 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_plasma_fresco_congelado_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,119 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_plasma_fresco_congelado_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,119 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_plasma_comum_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,119 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_plasma_comum_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,120 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_plasma_comum_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,120 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_hemacias_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,120 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_hemacias_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,120 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_hemacias_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,120 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_hemacias_sem_buffy_coat_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,121 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_hemacias_sem_buffy_coat_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,121 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_hemacias_sem_buffy_coat_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,121 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,121 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,121 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,121 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_de_aferese_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,122 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_de_aferese_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,122 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_de_aferese_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,122 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_leucocitos_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,122 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_leucocitos_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,122 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_leucocitos_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,122 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_crioprecipitado_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,123 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_crioprecipitado_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,123 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_crioprecipitado_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,123 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_sem_buffy_coat_ambulatorial': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,123 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_sem_buffy_coat_hospitalar': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,123 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'tranfusoes_concentrado_de_plaquetas_sem_buffy_coat_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,123 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_sangue_total_sem_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,123 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_sangue_total_com_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,123 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_sangue_total_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,125 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_fresco_congelado_sem_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,125 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_fresco_congelado_com_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,125 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_fresco_congelado_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,125 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_comum_sem_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,125 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_comum_com_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,126 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_plasma_comum_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,126 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_sem_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,126 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_com_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,126 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,126 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_sem_buffy_coat_sem_exame_pre_transfusi': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,127 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_sem_buffy_coat_com_exame_pre_transfusi': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,127 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_hemacias_sem_buffy_coat_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,127 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_sem_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,127 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_com_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,127 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,127 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_sem_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,128 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_com_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,128 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_aferese_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,128 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_leucocitos_sem_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,128 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_leucocitos_com_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,129 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_leucocitos_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,129 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_crioprecipitado_sem_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,129 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_crioprecipitado_com_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,129 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_crioprecipitado_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,129 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_sem_buffy_coat_sem_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,129 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_sem_buffy_coat_com_exame_pre_transfusional': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,130 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'distribuicao_para_outros_servicos_concentrado_de_plaquetas_sem_buffy_coat_total': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,130 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'procedimentos_de_modificacao_dos_hemocomponentes_lavagem': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,130 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'procedimentos_de_modificacao_dos_hemocomponentes_irradiacao': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,130 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'procedimentos_de_modificacao_dos_hemocomponentes_filtracao_em_concentrado_de_plaquetas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,131 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'procedimentos_de_modificacao_dos_hemocomponentes_filtracao_em_concentrado_de_hemacias': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,131 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'procedimentos_de_modificacao_dos_hemocomponentes_fracionamento_pediatrico': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,131 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'reacoes_transfusionais_reacao_febril_nao_hemolitica': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,131 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'reacoes_transfusionais_reacao_hemolitica': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,131 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'reacoes_transfusionais_reacao_alergica': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,131 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'reacoes_transfusionais_choque_bacteriano': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,131 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'reacoes_transfusionais_alteracoes_metabolicas': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,131 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'reacoes_transfusionais_sobrecarga_volemica': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,132 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'reacoes_transfusionais_outras_reacoes': 221 valores nulos preenchidos com 0
+2025-10-30 20:28:49,132 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'envio_plasma_producao_hemoderivados_plasma_fresco_congelado': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,132 - [INFO] - [hemoprod_ba.xlsx] -   → Coluna 'envio_plasma_producao_hemoderivados_plasma_comum': 663 valores nulos preenchidos com 0
+2025-10-30 20:28:49,132 - [INFO] - [hemoprod_ba.xlsx] - ✓ 247 colunas Int64 preenchidas com 0
+2025-10-30 20:28:49,132 - [INFO] - [hemoprod_ba.xlsx] - Iniciando deduplicação...
+2025-10-30 20:28:49,132 - [INFO] - [hemoprod_ba.xlsx] - Convertendo 'data_envio' para datetime...
+2025-10-30 20:28:49,143 - [INFO] - [hemoprod_ba.xlsx] - ✓ Deduplicação concluída - Removidas 267 linhas duplicadas
+2025-10-30 20:28:49,145 - [INFO] - [hemoprod_ba.xlsx] - ✓ Linhas Finais: 708
+2025-10-30 20:28:49,145 - [INFO] - [hemoprod_ba.xlsx] - Salvando arquivo processado...
+2025-10-30 20:28:50,366 - [INFO] - [hemoprod_ba.xlsx] - ============================================================
+2025-10-30 20:28:50,367 - [INFO] - [hemoprod_ba.xlsx] - ✅ PROCESSAMENTO CONCLUÍDO COM SUCESSO
+2025-10-30 20:28:50,367 - [INFO] - [hemoprod_ba.xlsx] - ✅ Arquivo salvo em: D:\Documentos\STTP\hemoce\src\dados_processados\hemoprod_ba.xlsx
+2025-10-30 20:28:50,367 - [INFO] - [hemoprod_ba.xlsx] - ============================================================
+2025-10-30 20:28:50,367 - [INFO] - [hemoprod_ba.xlsx] - 

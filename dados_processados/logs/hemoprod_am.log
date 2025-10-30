@@ -1,0 +1,42 @@
+2025-10-30 20:28:47,640 - [INFO] - [hemoprod_am.xlsx] - ============================================================
+2025-10-30 20:28:47,640 - [INFO] - [hemoprod_am.xlsx] - INICIANDO PROCESSAMENTO: AM
+2025-10-30 20:28:47,641 - [INFO] - [hemoprod_am.xlsx] - ============================================================
+2025-10-30 20:28:47,641 - [INFO] - [hemoprod_am.xlsx] - Carregando arquivo: Hemoprod_AM.xlsx
+2025-10-30 20:28:47,641 - [INFO] - [hemoprod_am.xlsx] - Planilha: HEMOPROD - AMAZONAS
+2025-10-30 20:28:47,689 - [INFO] - [hemoprod_am.xlsx] - ✓ Colunas Originais: 270
+2025-10-30 20:28:47,689 - [INFO] - [hemoprod_am.xlsx] - ✓ Linhas Originais: 32
+2025-10-30 20:28:47,689 - [INFO] - [hemoprod_am.xlsx] - Iniciando limpeza e renomeação de colunas...
+2025-10-30 20:28:47,689 - [INFO] - [hemoprod_am.xlsx] - ✓ Colunas limpas e renomeadas
+2025-10-30 20:28:47,690 - [INFO] - [hemoprod_am.xlsx] - Normalizando período e ano de referência...
+2025-10-30 20:28:47,690 - [INFO] - [hemoprod_am.xlsx] - ✓ Nenhum registro necessitou normalização de período/ano
+2025-10-30 20:28:47,690 - [INFO] - [hemoprod_am.xlsx] - ✓ Período/Ano normalizado
+2025-10-30 20:28:47,690 - [INFO] - [hemoprod_am.xlsx] - Normalizando município e estado...
+2025-10-30 20:28:47,690 - [INFO] - [hemoprod_am.xlsx] - Coluna 'estado' não existe. Criando...
+2025-10-30 20:28:47,691 - [INFO] - [hemoprod_am.xlsx] - ✓ Normalizados 32 registros com estado no município
+2025-10-30 20:28:47,691 - [INFO] - [hemoprod_am.xlsx] - ✓ Município/Estado normalizado
+2025-10-30 20:28:47,691 - [INFO] - [hemoprod_am.xlsx] - Aplicando tipos de dados...
+2025-10-30 20:28:47,731 - [INFO] - [hemoprod_am.xlsx] - ✓ Tipos aplicados
+2025-10-30 20:28:47,731 - [INFO] - [hemoprod_am.xlsx] - ✓ Colunas Faltantes: 1
+2025-10-30 20:28:47,731 - [INFO] - [hemoprod_am.xlsx] -   → ['estado']
+2025-10-30 20:28:47,731 - [INFO] - [hemoprod_am.xlsx] - ✓ Colunas A Mais: 1
+2025-10-30 20:28:47,731 - [INFO] - [hemoprod_am.xlsx] -   → ['URL de referência']
+2025-10-30 20:28:47,731 - [INFO] - [hemoprod_am.xlsx] - Padronizando schema...
+2025-10-30 20:28:47,733 - [INFO] - [hemoprod_am.xlsx] - Coluna 'estado' já existe, mantendo valores atuais
+2025-10-30 20:28:47,735 - [INFO] - [hemoprod_am.xlsx] - ✓ Schema padronizado - Colunas Finais: 270
+2025-10-30 20:28:47,735 - [INFO] - [hemoprod_am.xlsx] - Preenchendo valores nulos em colunas Int64 com 0...
+2025-10-30 20:28:47,735 - [INFO] - [hemoprod_am.xlsx] -   → Coluna 'semente': 1 valores nulos preenchidos com 0
+2025-10-30 20:28:47,735 - [INFO] - [hemoprod_am.xlsx] -   → Coluna 'identificacao_dado': 32 valores nulos preenchidos com 0
+2025-10-30 20:28:47,736 - [INFO] - [hemoprod_am.xlsx] -   → Coluna 'identificacao_estabelecimento': 32 valores nulos preenchidos com 0
+2025-10-30 20:28:47,736 - [INFO] - [hemoprod_am.xlsx] -   → Coluna 'cnes': 32 valores nulos preenchidos com 0
+2025-10-30 20:28:47,736 - [INFO] - [hemoprod_am.xlsx] -   → Coluna 'endereco': 32 valores nulos preenchidos com 0
+2025-10-30 20:28:47,746 - [INFO] - [hemoprod_am.xlsx] - ✓ 5 colunas Int64 preenchidas com 0
+2025-10-30 20:28:47,746 - [INFO] - [hemoprod_am.xlsx] - Iniciando deduplicação...
+2025-10-30 20:28:47,746 - [INFO] - [hemoprod_am.xlsx] - Convertendo 'data_envio' para datetime...
+2025-10-30 20:28:47,751 - [INFO] - [hemoprod_am.xlsx] - ✓ Deduplicação concluída - Removidas 0 linhas duplicadas
+2025-10-30 20:28:47,751 - [INFO] - [hemoprod_am.xlsx] - ✓ Linhas Finais: 32
+2025-10-30 20:28:47,751 - [INFO] - [hemoprod_am.xlsx] - Salvando arquivo processado...
+2025-10-30 20:28:47,852 - [INFO] - [hemoprod_am.xlsx] - ============================================================
+2025-10-30 20:28:47,852 - [INFO] - [hemoprod_am.xlsx] - ✅ PROCESSAMENTO CONCLUÍDO COM SUCESSO
+2025-10-30 20:28:47,852 - [INFO] - [hemoprod_am.xlsx] - ✅ Arquivo salvo em: D:\Documentos\STTP\hemoce\src\dados_processados\hemoprod_am.xlsx
+2025-10-30 20:28:47,853 - [INFO] - [hemoprod_am.xlsx] - ============================================================
+2025-10-30 20:28:47,853 - [INFO] - [hemoprod_am.xlsx] - 

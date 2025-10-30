@@ -1,0 +1,40 @@
+2025-10-30 20:29:19,685 - [INFO] - [hemoprod_rr.xlsx] - ============================================================
+2025-10-30 20:29:19,685 - [INFO] - [hemoprod_rr.xlsx] - INICIANDO PROCESSAMENTO: RR
+2025-10-30 20:29:19,685 - [INFO] - [hemoprod_rr.xlsx] - ============================================================
+2025-10-30 20:29:19,685 - [INFO] - [hemoprod_rr.xlsx] - Carregando arquivo: Hemoprod_RR.xlsx
+2025-10-30 20:29:19,686 - [INFO] - [hemoprod_rr.xlsx] - Planilha: HEMOPROD - RORAIMA
+2025-10-30 20:29:19,756 - [INFO] - [hemoprod_rr.xlsx] - ✓ Colunas Originais: 269
+2025-10-30 20:29:19,757 - [INFO] - [hemoprod_rr.xlsx] - ✓ Linhas Originais: 25
+2025-10-30 20:29:19,757 - [INFO] - [hemoprod_rr.xlsx] - Iniciando limpeza e renomeação de colunas...
+2025-10-30 20:29:19,757 - [INFO] - [hemoprod_rr.xlsx] - ✓ Colunas limpas e renomeadas
+2025-10-30 20:29:19,757 - [INFO] - [hemoprod_rr.xlsx] - Normalizando período e ano de referência...
+2025-10-30 20:29:19,758 - [INFO] - [hemoprod_rr.xlsx] - ✓ Nenhum registro necessitou normalização de período/ano
+2025-10-30 20:29:19,758 - [INFO] - [hemoprod_rr.xlsx] - ✓ Período/Ano normalizado
+2025-10-30 20:29:19,758 - [INFO] - [hemoprod_rr.xlsx] - Normalizando município e estado...
+2025-10-30 20:29:19,758 - [INFO] - [hemoprod_rr.xlsx] - Coluna 'estado' não existe. Criando...
+2025-10-30 20:29:19,759 - [INFO] - [hemoprod_rr.xlsx] - ✓ Normalizados 25 registros com estado no município
+2025-10-30 20:29:19,759 - [INFO] - [hemoprod_rr.xlsx] - ✓ Município/Estado normalizado
+2025-10-30 20:29:19,759 - [INFO] - [hemoprod_rr.xlsx] - Aplicando tipos de dados...
+2025-10-30 20:29:19,793 - [INFO] - [hemoprod_rr.xlsx] - ✓ Tipos aplicados
+2025-10-30 20:29:19,793 - [INFO] - [hemoprod_rr.xlsx] - ✓ Colunas Faltantes: 1
+2025-10-30 20:29:19,793 - [INFO] - [hemoprod_rr.xlsx] -   → ['estado']
+2025-10-30 20:29:19,793 - [INFO] - [hemoprod_rr.xlsx] - ✓ Colunas A Mais: 0
+2025-10-30 20:29:19,794 - [INFO] - [hemoprod_rr.xlsx] - Padronizando schema...
+2025-10-30 20:29:19,794 - [INFO] - [hemoprod_rr.xlsx] - Coluna 'estado' já existe, mantendo valores atuais
+2025-10-30 20:29:19,795 - [INFO] - [hemoprod_rr.xlsx] - ✓ Schema padronizado - Colunas Finais: 270
+2025-10-30 20:29:19,795 - [INFO] - [hemoprod_rr.xlsx] - Preenchendo valores nulos em colunas Int64 com 0...
+2025-10-30 20:29:19,796 - [INFO] - [hemoprod_rr.xlsx] -   → Coluna 'identificacao_dado': 25 valores nulos preenchidos com 0
+2025-10-30 20:29:19,796 - [INFO] - [hemoprod_rr.xlsx] -   → Coluna 'identificacao_estabelecimento': 25 valores nulos preenchidos com 0
+2025-10-30 20:29:19,797 - [INFO] - [hemoprod_rr.xlsx] -   → Coluna 'cnes': 25 valores nulos preenchidos com 0
+2025-10-30 20:29:19,797 - [INFO] - [hemoprod_rr.xlsx] -   → Coluna 'endereco': 25 valores nulos preenchidos com 0
+2025-10-30 20:29:19,806 - [INFO] - [hemoprod_rr.xlsx] - ✓ 4 colunas Int64 preenchidas com 0
+2025-10-30 20:29:19,806 - [INFO] - [hemoprod_rr.xlsx] - Iniciando deduplicação...
+2025-10-30 20:29:19,806 - [INFO] - [hemoprod_rr.xlsx] - Convertendo 'data_envio' para datetime...
+2025-10-30 20:29:19,810 - [INFO] - [hemoprod_rr.xlsx] - ✓ Deduplicação concluída - Removidas 0 linhas duplicadas
+2025-10-30 20:29:19,810 - [INFO] - [hemoprod_rr.xlsx] - ✓ Linhas Finais: 25
+2025-10-30 20:29:19,811 - [INFO] - [hemoprod_rr.xlsx] - Salvando arquivo processado...
+2025-10-30 20:29:19,876 - [INFO] - [hemoprod_rr.xlsx] - ============================================================
+2025-10-30 20:29:19,876 - [INFO] - [hemoprod_rr.xlsx] - ✅ PROCESSAMENTO CONCLUÍDO COM SUCESSO
+2025-10-30 20:29:19,876 - [INFO] - [hemoprod_rr.xlsx] - ✅ Arquivo salvo em: D:\Documentos\STTP\hemoce\src\dados_processados\hemoprod_rr.xlsx
+2025-10-30 20:29:19,876 - [INFO] - [hemoprod_rr.xlsx] - ============================================================
+2025-10-30 20:29:19,876 - [INFO] - [hemoprod_rr.xlsx] - 
