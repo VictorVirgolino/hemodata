@@ -89,6 +89,14 @@ def load_data():
 
 df = load_data()
 
+# === Teste Temporário para conferir o total SEM FILTRO ===
+coluna_descarte = "descarte_bolsas_total_bolsas_descartadas_auto_exclusao"
+if coluna_descarte in df.columns:
+    total_sem_filtro = df[coluna_descarte].sum()
+    # Remova esta linha após o teste!
+    st.sidebar.markdown(f"**Total SEM Filtro (DEBUG):** {int(total_sem_filtro):,}")
+# =========================================================
+
 # Normalizar mês por extenso (PT-BR) + ano
 MES_MAP = {
     "janeiro": 1,
@@ -265,10 +273,15 @@ if {"periodo_key", "periodo_label"}.issubset(df_filtrado.columns):
     labels = [p["periodo_label"] for p in periodo_opts]
     keys = [p["periodo_key"] for p in periodo_opts]
 
-    sel_labels = st.sidebar.multiselect("Mês (Período)", labels, default=labels)
+    # ALTERAÇÃO AQUI: default=[] (lista vazia)
+    sel_labels = st.sidebar.multiselect("Mês (Período)", labels, default=[]) 
+    
+    # É FUNDAMENTAL manter a lógica 'if sel_labels:' para filtrar APENAS se houver seleções
     if sel_labels:
         sel_keys = [keys[labels.index(lbl)] for lbl in sel_labels]
         df_filtrado = df_filtrado[df_filtrado["periodo_key"].isin(sel_keys)]
+    # Se sel_labels for [] (vazio), o filtro de período NÃO é aplicado,
+    # o que deve resolver seu problema de o filtro estar ativo por padrão.
 
 st.sidebar.markdown("---")
 st.sidebar.info(f"📊 Total de registros: {len(df_filtrado)}")
