@@ -219,13 +219,13 @@ if "estado" in df_filtrado.columns:
         estados.remove("Não Mapeado")
         estados.append("Não Mapeado")
 
-    estado_selecionado = st.sidebar.multiselect("Estado", estados, default=estados)
+    estado_selecionado = st.sidebar.multiselect("Estado", estados, default=[])
     if estado_selecionado:
         df_filtrado = df_filtrado[df_filtrado["estado"].isin(estado_selecionado)]
 
 if "ano_referencia" in df_filtrado.columns:
     anos = sorted(df_filtrado["ano_referencia"].dropna().unique())
-    ano_selecionado = st.sidebar.multiselect("Ano de Referência", anos, default=anos)
+    ano_selecionado = st.sidebar.multiselect("Ano de Referência", anos, default=[])
     if ano_selecionado:
         df_filtrado = df_filtrado[df_filtrado["ano_referencia"].isin(ano_selecionado)]
 
@@ -291,35 +291,45 @@ st.header("📊 Métricas Principais")
 
 col1, col2, col3, col4, col5 = st.columns(5)
 
+# --- CORREÇÃO AQUI ---
+# Use as colunas base da triagem para evitar contagem duplicada
+cols_aptos = [
+    "triagem_clinica_total_doacao_espontanea_aptos",
+    "triagem_clinica_total_doacao_reposicao_aptos",
+    "triagem_clinica_total_doacao_autologa_aptos",
+]
+cols_inaptos = [
+    "triagem_clinica_total_doacao_espontanea_inaptos",
+    "triagem_clinica_total_doacao_reposicao_inaptos",
+    "triagem_clinica_total_doacao_autologa_inaptos",
+]
+
 with col1:
-    total_aptos = (
-        df_filtrado[
-            [
-                c
-                for c in df_filtrado.columns
-                if "aptos" in c.lower() and "inaptos" not in c.lower()
-            ]
-        ]
-        .sum()
-        .sum()
-    )
+    total_aptos = 0
+    for col in cols_aptos:
+        if col in df_filtrado.columns:
+            total_aptos += df_filtrado[col].sum()
     st.metric("Candidatos Aptos", f"{int(total_aptos):,}")
 
 with col2:
-    total_inaptos = (
-        df_filtrado[[c for c in df_filtrado.columns if "inaptos" in c.lower()]]
-        .sum()
-        .sum()
-    )
+    total_inaptos = 0
+    for col in cols_inaptos:
+        if col in df_filtrado.columns:
+            total_inaptos += df_filtrado[col].sum()
     st.metric("Candidatos Inaptos", f"{int(total_inaptos):,}")
+# --- FIM DA CORREÇÃO ---
 
 with col3:
-    total_coletas = (
-        df_filtrado[["total_coletas_sangue_total", "total_coletas_aferese"]].sum().sum()
-    )
+    # Esta métrica já estava correta
+    total_coletas = 0
+    if "total_coletas_sangue_total" in df_filtrado.columns:
+        total_coletas += df_filtrado["total_coletas_sangue_total"].sum()
+    if "total_coletas_aferese" in df_filtrado.columns:
+        total_coletas += df_filtrado["total_coletas_aferese"].sum()
     st.metric("Total de Coletas", f"{int(total_coletas):,}")
 
 with col4:
+    # Esta métrica já estava correta
     if "inaptidao_triagem_laboratorial_total_bolsas_testadas" in df_filtrado.columns:
         total_bolsas = df_filtrado[
             "inaptidao_triagem_laboratorial_total_bolsas_testadas"
@@ -327,6 +337,7 @@ with col4:
         st.metric("Bolsas Testadas", f"{int(total_bolsas):,}")
 
 with col5:
+    # Esta métrica já estava correta
     if "descarte_bolsas_total_bolsas_descartadas_auto_exclusao" in df_filtrado.columns:
         total_descarte = df_filtrado[
             "descarte_bolsas_total_bolsas_descartadas_auto_exclusao"
@@ -1302,46 +1313,49 @@ else:
     )
 
 st.markdown("---")
-
 # ===== SEÇÃO 14: ANÁLISE GEOGRÁFICA =====
 if "municipio" in df_filtrado.columns:
     st.header("🗺️ Análise por Município")
 
     municipio_stats = (
-        df_filtrado.groupby("municipio")
+        # 1. CORREÇÃO: Use df_filtrado para que os filtros funcionem
+        df_filtrado.groupby("municipio") 
         .agg(
             {
                 "total_coletas_sangue_total": "sum",
-                "total_coletas_aferese": "sum",
-                "inaptidao_triagem_laboratorial_total_bolsas_testadas": "sum",
             }
         )
+        # 2. ADIÇÃO: Use .fillna(0) para corresponder ao seu teste
+        #    Isso garante que valores 'NaN' na soma se tornem 0
+        .fillna(0) 
         .reset_index()
     )
 
     municipio_stats["Total Coletas"] = (
         municipio_stats["total_coletas_sangue_total"]
-        + municipio_stats["total_coletas_aferese"]
     )
     municipio_stats = municipio_stats.sort_values("Total Coletas", ascending=False)
+    
+    # Opcional, mas recomendado: Limitar a exibição aos Top 50, como no seu teste
+    # Se você quiser mostrar TODOS, pode remover a linha abaixo.
+    municipio_stats_top = municipio_stats.head(50) 
 
     municipio_total_coletas = municipio_stats["Total Coletas"].sum()
 
     if municipio_total_coletas > 0:
         fig = px.bar(
-            municipio_stats,
+            # Use a variável 'municipio_stats_top' (ou 'municipio_stats' se quiser todos)
+            municipio_stats_top, 
             x="municipio",
             y="Total Coletas",
-            title="Municípios por Total de Coletas",
+            title="Municípios por Total de Coletas (Top 50)", # Título atualizado
             color="Total Coletas",
             color_continuous_scale="Blues",
         )
         fig.update_xaxes(tickangle=-45)
         st.plotly_chart(fig, use_container_width=True)
     else:
-        st.info("Nenhuma coleta registrada na análise geográfica.")
-
-st.markdown("---")
+        st.info("Nenhuma coleta registrada na análise geográfica para os filtros selecionados.")
 
 # ===== SEÇÃO 15: OBSERVAÇÕES IMPORTANTES =====
 st.header("📝 Observações Importantes")
