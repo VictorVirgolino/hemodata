@@ -1348,7 +1348,7 @@ if "municipio" in df_filtrado.columns:
             municipio_stats_top, 
             x="municipio",
             y="Total Coletas",
-            title="Municípios por Total de Coletas (Top 50)", # Título atualizado
+            title="Municípios por Total de Coletas (Top 15)", # Título atualizado
             color="Total Coletas",
             color_continuous_scale="Blues",
         )
