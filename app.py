@@ -1338,7 +1338,7 @@ if "municipio" in df_filtrado.columns:
     
     # Opcional, mas recomendado: Limitar a exibição aos Top 50, como no seu teste
     # Se você quiser mostrar TODOS, pode remover a linha abaixo.
-    municipio_stats_top = municipio_stats.head(50) 
+    municipio_stats_top = municipio_stats.head(15) 
 
     municipio_total_coletas = municipio_stats["Total Coletas"].sum()
 
