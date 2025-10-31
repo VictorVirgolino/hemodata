@@ -47,13 +47,14 @@ def load_data():
             return df
         except Exception as e:
             st.error(f"ERRO ao carregar o arquivo Parquet ({parquet_path}): {e}")
+            # Se der erro, tenta o fallback para o Excel
 
     # 2. Se o Parquet não existir ou falhar, tenta carregar os XLSX (fallback)
     st.warning(
         "Arquivo Parquet não encontrado ou falhou ao carregar. Tentando carregar arquivos Excel (fallback)..."
     )
 
-    path = "."
+    path = "."  # Diretório atual
     brutos_files = glob.glob(os.path.join(path, "dados_brutos", "Hemoprod_*.xlsx"))
     processados_files = glob.glob(
         os.path.join(path, "dados_processados", "hemoprod_*.xlsx")
@@ -89,7 +90,7 @@ def load_data():
 
 df = load_data()
 
-# Normalizar mês por extenso (PT-BR) + ano
+# Normalizar mês por extenso (PT-BR) + ano para criar um label AAAA-MM e um label amigável
 MES_MAP = {
     "janeiro": 1,
     "fevereiro": 2,
@@ -108,31 +109,36 @@ MES_MAP = {
 
 
 def parse_mes_ano(valor):
+    # Aceita formatos como "Janeiro", "Janeiro/2024", "Jan/2024", "Janeiro 2024", etc.
     if pd.isna(valor):
         return None, None, None
     s = str(valor).strip().lower()
     s = s.replace("-", " ").replace("_", " ").replace(".", " ").replace(",", " ")
-    s = " ".join(s.split())
+    s = " ".join(s.split())  # normaliza espaços
+    # tentativas comuns
     tokens = s.replace("/", " ").split()
     mes_num = None
     ano = None
 
+    # procurar qualquer token que bata com mês PT-BR
     for t in tokens:
         if t in MES_MAP:
             mes_num = MES_MAP[t]
             break
 
+    # procurar ano (4 dígitos) em qualquer token
     for t in tokens:
         if t.isdigit() and len(t) == 4:
             ano = int(t)
             break
 
+    # fallback: se não houver ano, tente extrair de uma coluna ano_referencia
     return mes_num, ano, s
 
 
 # Cria colunas padronizadas
 df["periodo_key"] = pd.NA
-df["periodo_label"] = pd.NA
+df["periodo_label"] = pd.NA  # exibição amigável "Mês/AAAA"
 
 if "periodo_referencia" in df.columns:
     anos_aux = (
@@ -146,12 +152,14 @@ if "periodo_referencia" in df.columns:
     for i, val in df["periodo_referencia"].items():
         mes_num, ano, _raw = parse_mes_ano(val)
         if pd.isna(ano) or ano is None:
+            # tentar ano da coluna ano_referencia
             ano = anos_aux.iloc[i] if i in anos_aux.index else None
         if pd.isna(ano) or ano is None or pd.isna(mes_num) or mes_num is None:
             keys.append(pd.NA)
             labels.append(pd.NA)
         else:
             key = f"{int(ano):04d}-{int(mes_num):02d}"
+            # mês por extenso capitalizado
             mes_nome = [k for k, v in MES_MAP.items() if v == mes_num][0].capitalize()
             label = f"{mes_nome}/{int(ano)}"
             keys.append(key)
@@ -167,10 +175,10 @@ st.markdown("---")
 st.sidebar.header("🔍 Filtros")
 
 df_filtrado = df.copy()
-
 # Mapeamento de UFs para Nomes de Estados
 if "uf" in df.columns:
     estado_map = {
+        # Mapeamento completo dos estados brasileiros
         "ac": "Acre",
         "al": "Alagoas",
         "ap": "Amapá",
@@ -198,29 +206,32 @@ if "uf" in df.columns:
         "sp": "São Paulo",
         "se": "Sergipe",
         "to": "Tocantins",
-        "hm": "Hemominas",
+        # Valor customizado
+        "hm": "Hemominas",  # Mantido conforme original
     }
     df_filtrado["estado"] = (
         df_filtrado["uf"].str.lower().map(estado_map).fillna("Não Mapeado")
     )
 
-# Filtros da sidebar
+# Filtro de Estado
 if "estado" in df_filtrado.columns:
     estados = sorted(df_filtrado["estado"].dropna().unique())
     if "Não Mapeado" in estados:
         estados.remove("Não Mapeado")
-        estados.append("Não Mapeado")
+        estados.append("Não Mapeado")  # Coloca por último
 
     estado_selecionado = st.sidebar.multiselect("Estado", estados, default=estados)
     if estado_selecionado:
         df_filtrado = df_filtrado[df_filtrado["estado"].isin(estado_selecionado)]
 
+# 1) Ano
 if "ano_referencia" in df_filtrado.columns:
     anos = sorted(df_filtrado["ano_referencia"].dropna().unique())
     ano_selecionado = st.sidebar.multiselect("Ano de Referência", anos, default=anos)
     if ano_selecionado:
         df_filtrado = df_filtrado[df_filtrado["ano_referencia"].isin(ano_selecionado)]
 
+# 2) Município
 if "municipio" in df_filtrado.columns:
     municipios = sorted(df_filtrado["municipio"].dropna().astype(str).unique())
     municipio_selecionado = st.sidebar.multiselect("Município", municipios)
@@ -229,6 +240,7 @@ if "municipio" in df_filtrado.columns:
             df_filtrado["municipio"].astype(str).isin(municipio_selecionado)
         ]
 
+# 3) Tipo de Estabelecimento
 if "tipo_estabelecimento" in df_filtrado.columns:
     tipos = sorted(df_filtrado["tipo_estabelecimento"].dropna().astype(str).unique())
     tipo_selecionado = st.sidebar.multiselect("Tipo de Estabelecimento", tipos)
@@ -237,6 +249,7 @@ if "tipo_estabelecimento" in df_filtrado.columns:
             df_filtrado["tipo_estabelecimento"].astype(str).isin(tipo_selecionado)
         ]
 
+# 4) Nome Fantasia (primeiro filtra por nome para limitar os meses disponíveis)
 nome_col = "razao_social_nome_fantasia"
 if nome_col in df_filtrado.columns:
     nomes_unicos = sorted(df_filtrado[nome_col].dropna().astype(str).unique())
@@ -254,6 +267,7 @@ if nome_col in df_filtrado.columns:
                 .str.contains(termo_low, na=False)
             ]
 
+# 5) Mês (Período) — opções montadas a partir do df já filtrado por nome
 if {"periodo_key", "periodo_label"}.issubset(df_filtrado.columns):
     periodo_opts = (
         df_filtrado[["periodo_key", "periodo_label"]]
@@ -276,7 +290,7 @@ st.sidebar.info(f"📊 Total de registros: {len(df_filtrado)}")
 # ===== SEÇÃO 1: MÉTRICAS PRINCIPAIS =====
 st.header("📊 Métricas Principais")
 
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     total_aptos = (
@@ -290,7 +304,7 @@ with col1:
         .sum()
         .sum()
     )
-    st.metric("Candidatos Aptos", f"{int(total_aptos):,}")
+    st.metric("Total de Candidatos Aptos", f"{int(total_aptos):,}")
 
 with col2:
     total_inaptos = (
@@ -298,7 +312,7 @@ with col2:
         .sum()
         .sum()
     )
-    st.metric("Candidatos Inaptos", f"{int(total_inaptos):,}")
+    st.metric("Total de Candidatos Inaptos", f"{int(total_inaptos):,}")
 
 with col3:
     total_coletas = (
@@ -313,13 +327,6 @@ with col4:
         ].sum()
         st.metric("Bolsas Testadas", f"{int(total_bolsas):,}")
 
-with col5:
-    if "descarte_bolsas_total_bolsas_descartadas_auto_exclusao" in df_filtrado.columns:
-        total_descarte = df_filtrado[
-            "descarte_bolsas_total_bolsas_descartadas_auto_exclusao"
-        ].sum()
-        st.metric("Bolsas Descartadas", f"{int(total_descarte):,}", delta=f"-{int(total_descarte):,}", delta_color="inverse")
-
 st.markdown("---")
 
 # ===== SEÇÃO 2: TRIAGEM CLÍNICA =====
@@ -333,6 +340,7 @@ with tab1:
     col1, col2 = st.columns(2)
 
     with col1:
+        # Doação por tipo
         doacao_data = {
             "Tipo": ["Espontânea", "Reposição", "Autóloga"],
             "Aptos": [
@@ -389,6 +397,7 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
+        # Pizza de aptidão
         total_aptos_doacao = df_doacao["Aptos"].sum()
         total_inaptos_doacao = df_doacao["Inaptos"].sum()
 
@@ -406,6 +415,7 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True)
 
 with tab2:
+    # Tipo de doador
     doador_data = {
         "Tipo": ["Primeira Vez", "Repetição", "Esporádico"],
         "Aptos": [
@@ -456,6 +466,7 @@ with tab2:
     st.plotly_chart(fig, use_container_width=True)
 
 with tab3:
+    # Gênero
     genero_data = {
         "Gênero": ["Masculino", "Feminino"],
         "Aptos": [
@@ -499,7 +510,9 @@ with tab3:
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
+        # Taxa de aptidão por gênero
         df_genero["Total"] = df_genero["Aptos"] + df_genero["Inaptos"]
+        # Filtra onde o total é maior que zero para evitar divisão por zero
         df_genero_valid = df_genero[df_genero["Total"] > 0].copy()
         df_genero_valid["Taxa_Aptidao"] = (
             df_genero_valid["Aptos"] / df_genero_valid["Total"]
@@ -516,6 +529,7 @@ with tab3:
         st.plotly_chart(fig, use_container_width=True)
 
 with tab4:
+    # Faixa etária
     idade_data = {
         "Faixa Etária": ["< 18 anos", "18-29 anos", "> 29 anos"],
         "Aptos": [
@@ -689,6 +703,7 @@ with col3:
     )
     st.metric("Candidatos Desistentes", f"{int(desistentes):,}")
 
+# Interrupções
 interrupcoes_data = {
     "Motivo": ["Dificuldade de Punção", "Reação Vagal", "Outros Motivos"],
     "Quantidade": [
@@ -711,6 +726,8 @@ interrupcoes_data = {
     ],
 }
 df_interrupcoes = pd.DataFrame(interrupcoes_data)
+
+# Remove linhas com quantidade zero para não poluir o gráfico
 df_interrupcoes_valid = df_interrupcoes[df_interrupcoes["Quantidade"] > 0]
 
 if not df_interrupcoes_valid.empty:
@@ -730,6 +747,7 @@ st.markdown("---")
 # ===== SEÇÃO 5: EXAMES E TRIAGEM LABORATORIAL =====
 st.header("🧪 Exames e Triagem Laboratorial")
 
+# Doenças transmissíveis
 doencas = {
     "Doença de Chagas": [
         "exames_triagem_doenca_doenca_chagas_amostras_testadas",
@@ -780,7 +798,9 @@ for doenca, cols in doencas.items():
     )
 
 df_doencas = pd.DataFrame(doencas_data)
-df_doencas_valid = df_doencas[df_doencas["Testadas"] > 0]
+df_doencas_valid = df_doencas[
+    df_doencas["Testadas"] > 0
+]  # Filtra apenas doenças com amostras testadas
 
 if not df_doencas_valid.empty:
     col1, col2 = st.columns(2)
@@ -809,6 +829,7 @@ if not df_doencas_valid.empty:
         fig.update_xaxes(tickangle=-45)
         st.plotly_chart(fig, use_container_width=True)
 
+    # Taxa de reagentes
     fig = px.bar(
         df_doencas_valid,
         x="Doença",
@@ -829,113 +850,76 @@ st.markdown("---")
 # ===== SEÇÃO 6: IMUNOHEMATOLOGIA =====
 st.header("🩸 Imunohematologia - Tipos Sanguíneos")
 
-tab1, tab2 = st.tabs(["Tipos Sanguíneos", "Exames Especializados"])
+tipos_sanguineos = ["A+", "B+", "AB+", "O+", "A-", "B-", "AB-", "O-"]
+tipo_map = {
+    "A+": [
+        "imunohematologia_a_positivo_doador",
+        "imunohematologia_a_positivo_receptor",
+    ],
+    "B+": [
+        "imunohematologia_b_positivo_doador",
+        "imunohematologia_b_positivo_receptor",
+    ],
+    "AB+": [
+        "imunohematologia_ab_positivo_doador",
+        "imunohematologia_ab_positivo_receptor",
+    ],
+    "O+": [
+        "imunohematologia_o_positivo_doador",
+        "imunohematologia_o_positivo_receptor",
+    ],
+    "A-": [
+        "imunohematologia_a_negativo_doador",
+        "imunohematologia_a_negativo_receptor",
+    ],
+    "B-": [
+        "imunohematologia_b_negativo_doador",
+        "imunohematologia_b_negativo_receptor",
+    ],
+    "AB-": [
+        "imunohematologia_ab_negativo_doador",
+        "imunohematologia_ab_negativo_receptor",
+    ],
+    "O-": [
+        "imunohematologia_o_negativo_doador",
+        "imunohematologia_o_negativo_receptor",
+    ],
+}
 
-with tab1:
-    tipos_sanguineos = ["A+", "B+", "AB+", "O+", "A-", "B-", "AB-", "O-"]
-    tipo_map = {
-        "A+": [
-            "imunohematologia_a_positivo_doador",
-            "imunohematologia_a_positivo_receptor",
-        ],
-        "B+": [
-            "imunohematologia_b_positivo_doador",
-            "imunohematologia_b_positivo_receptor",
-        ],
-        "AB+": [
-            "imunohematologia_ab_positivo_doador",
-            "imunohematologia_ab_positivo_receptor",
-        ],
-        "O+": [
-            "imunohematologia_o_positivo_doador",
-            "imunohematologia_o_positivo_receptor",
-        ],
-        "A-": [
-            "imunohematologia_a_negativo_doador",
-            "imunohematologia_a_negativo_receptor",
-        ],
-        "B-": [
-            "imunohematologia_b_negativo_doador",
-            "imunohematologia_b_negativo_receptor",
-        ],
-        "AB-": [
-            "imunohematologia_ab_negativo_doador",
-            "imunohematologia_ab_negativo_receptor",
-        ],
-        "O-": [
-            "imunohematologia_o_negativo_doador",
-            "imunohematologia_o_negativo_receptor",
-        ],
-    }
+tipo_data = []
+for tipo, cols in tipo_map.items():
+    doador = df_filtrado[cols[0]].sum() if cols[0] in df_filtrado.columns else 0
+    receptor = df_filtrado[cols[1]].sum() if cols[1] in df_filtrado.columns else 0
+    tipo_data.append({"Tipo Sanguíneo": tipo, "Doador": doador, "Receptor": receptor})
 
-    tipo_data = []
-    for tipo, cols in tipo_map.items():
-        doador = df_filtrado[cols[0]].sum() if cols[0] in df_filtrado.columns else 0
-        receptor = df_filtrado[cols[1]].sum() if cols[1] in df_filtrado.columns else 0
-        tipo_data.append({"Tipo Sanguíneo": tipo, "Doador": doador, "Receptor": receptor})
+df_tipos = pd.DataFrame(tipo_data)
 
-    df_tipos = pd.DataFrame(tipo_data)
+if df_tipos["Doador"].sum() > 0 or df_tipos["Receptor"].sum() > 0:
+    col1, col2 = st.columns(2)
 
-    if df_tipos["Doador"].sum() > 0 or df_tipos["Receptor"].sum() > 0:
-        col1, col2 = st.columns(2)
-
-        with col1:
-            fig = px.bar(
-                df_tipos,
-                x="Tipo Sanguíneo",
-                y="Doador",
-                title="Distribuição de Tipos Sanguíneos - Doadores",
-                color="Tipo Sanguíneo",
-                color_discrete_sequence=px.colors.qualitative.Set3,
-            )
-            st.plotly_chart(fig, use_container_width=True)
-
-        with col2:
-            fig = px.bar(
-                df_tipos,
-                x="Tipo Sanguíneo",
-                y="Receptor",
-                title="Distribuição de Tipos Sanguíneos - Receptores",
-                color="Tipo Sanguíneo",
-                color_discrete_sequence=px.colors.qualitative.Pastel,
-            )
-            st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.info("Não há dados de imunohematologia disponíveis para o filtro atual.")
-
-with tab2:
-    exames_especializados = {
-        "Fenotipagem Doador": "imunohematologia_fenotipagem_doador",
-        "Fenotipagem Receptor": "imunohematologia_fenotipagem_receptor",
-        "Coombs Direto Doador": "imunohematologia_combs_direto_doador",
-        "Coombs Direto Receptor": "imunohematologia_combs_direto_receptor",
-        "Pesquisa Anticorpo Irregular + Doador": "imunohematologia_pesquisa_anticorpo_irregular_positivo_doador",
-        "Pesquisa Anticorpo Irregular + Receptor": "imunohematologia_pesquisa_anticorpo_irregular_positivo_receptor",
-        "D Fraco Doador": "imunohematologia_dfraco_doador",
-        "D Fraco Receptor": "imunohematologia_dfraco_receptor",
-    }
-    
-    exames_data = []
-    for exame, col in exames_especializados.items():
-        quantidade = df_filtrado[col].sum() if col in df_filtrado.columns else 0
-        exames_data.append({"Exame": exame, "Quantidade": quantidade})
-    
-    df_exames = pd.DataFrame(exames_data)
-    df_exames_valid = df_exames[df_exames["Quantidade"] > 0]
-    
-    if not df_exames_valid.empty:
+    with col1:
         fig = px.bar(
-            df_exames_valid,
-            x="Exame",
-            y="Quantidade",
-            title="Exames Especializados de Imunohematologia",
-            color="Quantidade",
-            color_continuous_scale="Teal",
+            df_tipos,
+            x="Tipo Sanguíneo",
+            y="Doador",
+            title="Distribuição de Tipos Sanguíneos - Doadores",
+            color="Tipo Sanguíneo",
+            color_discrete_sequence=px.colors.qualitative.Set3,
         )
-        fig.update_xaxes(tickangle=-45)
         st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.info("Não há dados de exames especializados para o filtro atual.")
+
+    with col2:
+        fig = px.bar(
+            df_tipos,
+            x="Tipo Sanguíneo",
+            y="Receptor",
+            title="Distribuição de Tipos Sanguíneos - Receptores",
+            color="Tipo Sanguíneo",
+            color_discrete_sequence=px.colors.qualitative.Pastel,
+        )
+        st.plotly_chart(fig, use_container_width=True)
+else:
+    st.info("Não há dados de imunohematologia disponíveis para o filtro atual.")
 
 st.markdown("---")
 
@@ -990,118 +974,10 @@ if producao_total > 0:
 else:
     st.info("Não há dados de produção hemoterápica disponíveis para o filtro atual.")
 
-st.markdown("---")
-
-# ===== SEÇÃO 8: ENVIO DE PLASMA PARA HEMODERIVADOS =====
-st.header("🧬 Envio de Plasma para Produção de Hemoderivados")
-
-col1, col2, col3 = st.columns(3)
-
-plasma_fresco = (
-    df_filtrado["envio_plasma_producao_hemoderivados_plasma_fresco_congelado"].sum()
-    if "envio_plasma_producao_hemoderivados_plasma_fresco_congelado" in df_filtrado.columns
-    else 0
-)
-
-plasma_comum = (
-    df_filtrado["envio_plasma_producao_hemoderivados_plasma_comum"].sum()
-    if "envio_plasma_producao_hemoderivados_plasma_comum" in df_filtrado.columns
-    else 0
-)
-
-total_plasma_enviado = plasma_fresco + plasma_comum
-
-with col1:
-    st.metric("Plasma Fresco Congelado", f"{int(plasma_fresco):,}")
-
-with col2:
-    st.metric("Plasma Comum", f"{int(plasma_comum):,}")
-
-with col3:
-    st.metric("Total Enviado", f"{int(total_plasma_enviado):,}")
-
-if total_plasma_enviado > 0:
-    fig = go.Figure(data=[
-        go.Pie(
-            labels=["Plasma Fresco Congelado", "Plasma Comum"],
-            values=[plasma_fresco, plasma_comum],
-            hole=0.4,
-            marker_colors=["#3498db", "#9b59b6"],
-        )
-    ])
-    fig.update_layout(title="Distribuição de Plasma Enviado para Hemoderivados")
-    st.plotly_chart(fig, use_container_width=True)
-else:
-    st.info("Não há dados de envio de plasma para hemoderivados no período selecionado.")
 
 st.markdown("---")
 
-# ===== SEÇÃO 9: DISTRIBUIÇÃO PARA OUTROS SERVIÇOS =====
-st.header("🚚 Distribuição para Outros Serviços")
-
-tab1, tab2 = st.tabs(["Por Componente", "Análise de Exames Pré-Transfusionais"])
-
-with tab1:
-    distribuicao_data = []
-    for componente, nome_col in componentes.items():
-        sem_exame = df_filtrado.get(
-            f"distribuicao_para_outros_servicos_{nome_col}_sem_exame_pre_transfusional",
-            pd.Series([0])
-        ).sum()
-        com_exame = df_filtrado.get(
-            f"distribuicao_para_outros_servicos_{nome_col}_com_exame_pre_transfusional",
-            pd.Series([0])
-        ).sum()
-        total = df_filtrado.get(
-            f"distribuicao_para_outros_servicos_{nome_col}_total",
-            pd.Series([0])
-        ).sum()
-
-        distribuicao_data.append({
-            "Componente": componente,
-            "Sem Exame Pré-Transfusional": sem_exame,
-            "Com Exame Pré-Transfusional": com_exame,
-            "Total": total,
-        })
-
-    df_distribuicao = pd.DataFrame(distribuicao_data)
-    df_distribuicao_valid = df_distribuicao[df_distribuicao["Total"] > 0]
-
-    if not df_distribuicao_valid.empty:
-        fig = px.bar(
-            df_distribuicao_valid,
-            x="Componente",
-            y=["Sem Exame Pré-Transfusional", "Com Exame Pré-Transfusional"],
-            title="Distribuição por Tipo de Exame",
-            barmode="stack",
-            color_discrete_sequence=["#e74c3c", "#27ae60"],
-        )
-        fig.update_xaxes(tickangle=-45)
-        st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.info("Não há dados de distribuição para outros serviços.")
-
-with tab2:
-    if not df_distribuicao_valid.empty:
-        df_distribuicao_valid["Taxa Com Exame (%)"] = (
-            df_distribuicao_valid["Com Exame Pré-Transfusional"] / 
-            df_distribuicao_valid["Total"] * 100
-        ).fillna(0)
-
-        fig = px.bar(
-            df_distribuicao_valid,
-            x="Componente",
-            y="Taxa Com Exame (%)",
-            title="Taxa de Distribuição com Exame Pré-Transfusional (%)",
-            color="Taxa Com Exame (%)",
-            color_continuous_scale="Greens",
-        )
-        fig.update_xaxes(tickangle=-45)
-        st.plotly_chart(fig, use_container_width=True)
-
-st.markdown("---")
-
-# ===== SEÇÃO 10: PERDAS =====
+# ===== SEÇÃO 8: PERDAS =====
 st.header("📉 Perdas de Hemocomponentes")
 
 perdas_data = []
@@ -1156,7 +1032,7 @@ else:
 
 st.markdown("---")
 
-# ===== SEÇÃO 11: TRANSFUSÕES =====
+# ===== SEÇÃO 9: TRANSFUSÕES =====
 st.header("💉 Transfusões Realizadas")
 
 transfusoes_data = []
@@ -1199,7 +1075,7 @@ else:
 
 st.markdown("---")
 
-# ===== SEÇÃO 12: REAÇÕES TRANSFUSIONAIS =====
+# ===== SEÇÃO 10: REAÇÕES TRANSFUSIONAIS =====
 st.header("⚠️ Reações Transfusionais")
 
 reacoes_cols = {
@@ -1251,7 +1127,7 @@ else:
 
 st.markdown("---")
 
-# ===== SEÇÃO 13: PROCEDIMENTOS DE MODIFICAÇÃO =====
+# ===== SEÇÃO 11: PROCEDIMENTOS DE MODIFICAÇÃO =====
 st.header("🔧 Procedimentos de Modificação")
 
 procedimentos_cols = {
@@ -1290,7 +1166,7 @@ else:
 
 st.markdown("---")
 
-# ===== SEÇÃO 14: ANÁLISE GEOGRÁFICA =====
+# ===== SEÇÃO 12: ANÁLISE GEOGRÁFICA =====
 if "municipio" in df_filtrado.columns:
     st.header("🗺️ Análise por Município")
 
@@ -1310,7 +1186,9 @@ if "municipio" in df_filtrado.columns:
         municipio_stats["total_coletas_sangue_total"]
         + municipio_stats["total_coletas_aferese"]
     )
-    municipio_stats = municipio_stats.sort_values("Total Coletas", ascending=False)
+    municipio_stats = municipio_stats.sort_values(
+        "Total Coletas", ascending=False
+    )  # Não limitamos mais ao top 10 para ver todos
 
     municipio_total_coletas = municipio_stats["Total Coletas"].sum()
 
@@ -1330,33 +1208,10 @@ if "municipio" in df_filtrado.columns:
 
 st.markdown("---")
 
-# ===== SEÇÃO 15: OBSERVAÇÕES IMPORTANTES =====
-st.header("📝 Observações Importantes")
-
-obs_cols = ["hemoprod_1_observacoes", "hemoprod_2_observacoes", "hemoprod_3_observacoes"]
-obs_existentes = [col for col in obs_cols if col in df_filtrado.columns]
-
-if obs_existentes:
-    tem_observacoes = False
-    for col in obs_existentes:
-        obs_list = df_filtrado[col].dropna().unique()
-        if len(obs_list) > 0:
-            tem_observacoes = True
-            with st.expander(f"📌 {col.replace('_', ' ').title()}", expanded=False):
-                for obs in obs_list[:10]:  # Limita a 10 observações por categoria
-                    if str(obs).strip() and str(obs).lower() not in ['nan', 'none', '']:
-                        st.info(obs)
-    
-    if not tem_observacoes:
-        st.info("Não há observações registradas para os filtros selecionados.")
-else:
-    st.info("Colunas de observações não disponíveis no dataset.")
-
-st.markdown("---")
-
-# ===== SEÇÃO 16: TABELA DE DADOS =====
+# ===== SEÇÃO 13: TABELA DE DADOS =====
 st.header("📋 Dados Detalhados")
 
+# Seletor de colunas para exibir
 colunas_importantes = [
     "estado",
     "municipio",
@@ -1367,7 +1222,6 @@ colunas_importantes = [
     "total_coletas_sangue_total",
     "total_coletas_aferese",
     "inaptidao_triagem_laboratorial_total_bolsas_testadas",
-    "descarte_bolsas_total_bolsas_descartadas_auto_exclusao",
 ]
 
 colunas_disponiveis = [col for col in colunas_importantes if col in df_filtrado.columns]
@@ -1377,6 +1231,7 @@ if colunas_disponiveis:
 else:
     st.dataframe(df_filtrado.head(50), use_container_width=True)
 
+# Download dos dados filtrados
 st.download_button(
     label="📥 Download dos Dados Filtrados (CSV)",
     data=df_filtrado.to_csv(index=False).encode("utf-8"),
