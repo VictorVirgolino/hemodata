@@ -6,6 +6,8 @@ from plotly.subplots import make_subplots
 import numpy as np
 import glob
 import os
+import tempfile
+# from fpdf import FPDF
 
 # Configuração da página
 st.set_page_config(
@@ -169,6 +171,77 @@ if "periodo_referencia" in df.columns:
     df["periodo_label"] = labels
 
 
+# Função global de geração de PDF
+def create_pdf_report(df_gap_data, figures_list=[]):
+    pdf = FPDF(orientation='L', unit='mm', format='A4')
+    pdf.set_auto_page_break(auto=True, margin=15)
+    
+    # Capa
+    pdf.add_page()
+    pdf.set_font("helvetica", "B", 24)
+    pdf.cell(0, 40, "Relatorio Completo - HEMOPROD", ln=True, align="C")
+    pdf.set_font("helvetica", "", 12)
+    pdf.cell(0, 10, "Este relatorio contem os principais graficos e analises gerados.", ln=True, align="C")
+    pdf.ln(20)
+    
+    # 1. Renderizar Gráficos Coletados
+    for item in figures_list:
+        title = item.get("title", "Grafico")
+        fig = item.get("fig")
+        
+        if fig:
+            pdf.add_page()
+            pdf.set_font("helvetica", "B", 16)
+            pdf.cell(0, 15, title, ln=True, align="C")
+            
+            try:
+                with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmpfile:
+                    # Ajuste de escala para alta qualidade
+                    fig.write_image(tmpfile.name, format="png", width=1000, height=500, scale=1.5)
+                    tmp_path = tmpfile.name
+                
+                # Centralizar imagem
+                pdf.image(tmp_path, x=28, y=None, w=240)
+                os.remove(tmp_path)
+            except Exception as e:
+                pdf.set_font("helvetica", "I", 10)
+                pdf.cell(0, 10, f"Erro ao renderizar grafico: {str(e)}", ln=True, align="C")
+    
+    # 2. Tabela de Regularidade (Nova Página)
+    if not df_gap_data.empty:
+        pdf.add_page()
+        pdf.set_font("helvetica", "B", 16)
+        pdf.cell(0, 15, "Detalhes de Regularidade de Envios", ln=True, align="C")
+        pdf.ln(5)
+
+        # Cabeçalho da tabela
+        pdf.set_font("helvetica", "B", 10)
+        col_widths = [40, 30, 30, 25, 25, 20, 90]
+        headers = ["Estado", "Primeiro Envio", "Ultimo Envio", "Total", "Status", "Gaps", "Meses Ausentes"]
+        
+        for i, h in enumerate(headers):
+            pdf.cell(col_widths[i], 10, h, border=1, align="C")
+        pdf.ln()
+
+        # Dados da tabela
+        pdf.set_font("helvetica", "", 9)
+        for _, row in df_gap_data.iterrows():
+            estado_clean = str(row["Estado"]).encode('latin-1', 'replace').decode('latin-1')
+            meses_clean = str(row["Meses Ausentes (Buracos)"])
+            if len(meses_clean) > 45: 
+                meses_clean = meses_clean[:42] + "..."
+            
+            pdf.cell(col_widths[0], 10, estado_clean, border=1)
+            pdf.cell(col_widths[1], 10, str(row["Primeiro Envio"]), border=1, align="C")
+            pdf.cell(col_widths[2], 10, str(row["Último Envio"]), border=1, align="C")
+            pdf.cell(col_widths[3], 10, str(row["Total Envios"]), border=1, align="C")
+            pdf.cell(col_widths[4], 10, str(row["Status"]), border=1, align="C")
+            pdf.cell(col_widths[5], 10, str(row["Qtd. Ausentes"]), border=1, align="C")
+            pdf.cell(col_widths[6], 10, meses_clean, border=1)
+            pdf.ln()
+    
+    return pdf.output(dest='S')
+
 # Título principal
 st.title("🩸 Dashboard de Hemoprodução - HEMOPROD")
 st.markdown("---")
@@ -177,40 +250,80 @@ st.sidebar.header("🔍 Filtros")
 df_filtrado = df.copy()
 
 # Mapeamento de UFs para Nomes de Estados
-if "uf" in df.columns:
-    estado_map = {
-        "ac": "Acre",
-        "al": "Alagoas",
-        "ap": "Amapá",
-        "am": "Amazonas",
-        "ba": "Bahia",
-        "ce": "Ceará",
-        "df": "Distrito Federal",
-        "es": "Espírito Santo",
-        "go": "Goiás",
-        "ma": "Maranhão",
-        "mt": "Mato Grosso",
-        "ms": "Mato Grosso do Sul",
-        "mg": "Minas Gerais",
-        "pa": "Pará",
-        "pb": "Paraíba",
-        "pr": "Paraná",
-        "pe": "Pernambuco",
-        "pi": "Piauí",
-        "rj": "Rio de Janeiro",
-        "rn": "Rio Grande do Norte",
-        "rs": "Rio Grande do Sul",
-        "ro": "Rondônia",
-        "rr": "Roraima",
-        "sc": "Santa Catarina",
-        "sp": "São Paulo",
-        "se": "Sergipe",
-        "to": "Tocantins",
-        "hm": "Hemominas",
-    }
-    df_filtrado["estado"] = (
-        df_filtrado["uf"].str.lower().map(estado_map).fillna("Não Mapeado")
-    )
+estado_map = {
+    "ac": "Acre",
+    "al": "Alagoas",
+    "ap": "Amapá",
+    "am": "Amazonas",
+    "ba": "Bahia",
+    "ce": "Ceará",
+    "df": "Distrito Federal",
+    "es": "Espírito Santo",
+    "go": "Goiás",
+    "ma": "Maranhão",
+    "mt": "Mato Grosso",
+    "ms": "Mato Grosso do Sul",
+    "mg": "Minas Gerais",
+    "pa": "Pará",
+    "pb": "Paraíba",
+    "pr": "Paraná",
+    "pe": "Pernambuco",
+    "pi": "Piauí",
+    "rj": "Rio de Janeiro",
+    "rn": "Rio Grande do Norte",
+    "rs": "Rio Grande do Sul",
+    "ro": "Rondônia",
+    "rr": "Roraima",
+    "sc": "Santa Catarina",
+    "sp": "São Paulo",
+    "se": "Sergipe",
+    "to": "Tocantins",
+}
+
+# Lista oficial de estados para validação/eixos (Canonical Names)
+ESTADOS_BRASIL = sorted(list(estado_map.values()))
+
+# Cria um mapa de normalização robusto:
+# mapeia tanto "rn" -> "Rio Grande do Norte" quanto "rio grande do norte" -> "Rio Grande do Norte"
+normalization_map = {}
+
+# 1. Adiciona as siglas
+for sigla, nome in estado_map.items():
+    normalization_map[sigla] = nome
+    
+# 2. Adiciona os nomes completos (em minúsculo) para garantir match insensível a caixa
+for nome in estado_map.values():
+    normalization_map[nome.lower()] = nome
+
+# Lógica de Normalização de Estado:
+
+# Passo 1: Determinar uma coluna base de estado (priorizando 'estado' existente, ou 'uf' como fallback)
+coluna_base = pd.Series([pd.NA] * len(df_filtrado), index=df_filtrado.index, dtype=object)
+
+if "estado" in df_filtrado.columns:
+    coluna_base = df_filtrado["estado"].astype(str)
+elif "uf" in df_filtrado.columns:
+    coluna_base = df_filtrado["uf"].astype(str)
+
+# Passo 2: Normalizar usando o mapa robusto
+# Converter para minúsculo, padronizar espaços (remove duplos e NBSP) e remover pontas
+estado_normalizado = (
+    coluna_base.astype(str)
+    .str.lower()
+    .str.replace(r'\s+', ' ', regex=True)
+    .str.strip()
+    .map(normalization_map)
+)
+
+# Passo 3: Atribuir ao DataFrame
+# Se não mapeou (retornou NaN), define como "Não Mapeado"
+df_filtrado["estado"] = estado_normalizado.fillna("Não Mapeado")
+
+# Remove colunas auxiliares se existirem (limpeza)
+for col in ["estado_uf", "estado_temp"]:
+    if col in df_filtrado.columns:
+        df_filtrado.drop(columns=[col], inplace=True)
+
 
 # Filtros da sidebar
 if "estado" in df_filtrado.columns:
@@ -285,6 +398,13 @@ if {"periodo_key", "periodo_label"}.issubset(df_filtrado.columns):
 
 st.sidebar.markdown("---")
 st.sidebar.info(f"📊 Total de registros: {len(df_filtrado)}")
+sidebar_pdf_placeholder = st.sidebar.empty()
+
+# Lista global para coletar figuras para o relatório
+report_figures = []
+
+# Lista global para coletar figuras para o relatório
+report_figures = []
 
 # ===== SEÇÃO 1: MÉTRICAS PRINCIPAIS =====
 st.header("📊 Métricas Principais")
@@ -411,6 +531,7 @@ with tab1:
             color_discrete_sequence=["#2ecc71", "#e74c3c"],
         )
         st.plotly_chart(fig, use_container_width=True)
+        report_figures.append({"title": "Candidatos por Tipo de Doação", "fig": fig})
 
     with col2:
         total_aptos_doacao = df_doacao["Aptos"].sum()
@@ -428,6 +549,7 @@ with tab1:
         )
         fig.update_layout(title="Proporção de Aptidão Geral")
         st.plotly_chart(fig, use_container_width=True)
+        report_figures.append({"title": "Proporção de Aptidão Geral", "fig": fig})
 
 with tab2:
     doador_data = {
@@ -478,6 +600,7 @@ with tab2:
         color_discrete_sequence=["#3498db", "#e67e22"],
     )
     st.plotly_chart(fig, use_container_width=True)
+    report_figures.append({"title": "Candidatos por Tipo de Doador", "fig": fig})
 
 with tab3:
     genero_data = {
@@ -521,6 +644,7 @@ with tab3:
             color_discrete_sequence=["#9b59b6", "#f39c12"],
         )
         st.plotly_chart(fig, use_container_width=True)
+        report_figures.append({"title": "Candidatos por Gênero", "fig": fig})
 
     with col2:
         df_genero["Total"] = df_genero["Aptos"] + df_genero["Inaptos"]
@@ -538,6 +662,7 @@ with tab3:
             color_discrete_sequence=["#9b59b6", "#f39c12"],
         )
         st.plotly_chart(fig, use_container_width=True)
+        report_figures.append({"title": "Taxa de Aptidão por Gênero (%)", "fig": fig})
 
 with tab4:
     idade_data = {
@@ -588,6 +713,7 @@ with tab4:
         color_discrete_sequence=["#1abc9c", "#e74c3c"],
     )
     st.plotly_chart(fig, use_container_width=True)
+    report_figures.append({"title": "Candidatos por Faixa Etária", "fig": fig})
 
 st.markdown("---")
 
@@ -665,6 +791,7 @@ with col1:
     )
     fig.update_xaxes(tickangle=-45)
     st.plotly_chart(fig, use_container_width=True)
+    report_figures.append({"title": "Total de Inaptidões por Motivo", "fig": fig})
 
 with col2:
     fig = px.bar(
@@ -677,6 +804,7 @@ with col2:
     )
     fig.update_xaxes(tickangle=-45)
     st.plotly_chart(fig, use_container_width=True)
+    report_figures.append({"title": "Inaptidões por Motivo e Gênero", "fig": fig})
 
 st.markdown("---")
 
@@ -1183,9 +1311,24 @@ st.markdown("---")
 # ===== SEÇÃO 11: TRANSFUSÕES =====
 st.header("💉 Transfusões Realizadas")
 
+# Definir todas as categorias de transfusões
+transfusoes_categorias = {
+    "Sangue Total": "sangue_total",
+    "Plasma Fresco Congelado": "plasma_fresco_congelado",
+    "Plasma Comum": "plasma_comum",
+    "Concentrado de Hemácias": "concentrado_de_hemacias",
+    "Concentrado de Hemácias sem Buffy Coat": "concentrado_de_hemacias_sem_buffy_coat",
+    "Concentrado de Plaquetas": "concentrado_de_plaquetas",
+    "Concentrado de Plaquetas de Aférese": "concentrado_de_plaquetas_de_aferese",
+    "Concentrado de Leucócitos": "concentrado_de_leucocitos",
+    "Crioprecipitado": "crioprecipitado",
+    "Concentrado de Plaquetas sem Buffy Coat": "concentrado_de_plaquetas_sem_buffy_coat",
+}
+
 transfusoes_data = []
-transfusoes_total = 0
-for componente, nome_col in componentes.items():
+transfusoes_total_geral = 0
+
+for componente, nome_col in transfusoes_categorias.items():
     ambulatorial = df_filtrado.get(
         f"tranfusoes_{nome_col}_ambulatorial", pd.Series([0])
     ).sum()
@@ -1202,21 +1345,43 @@ for componente, nome_col in componentes.items():
             "Total": total,
         }
     )
-    transfusoes_total += total
+    transfusoes_total_geral += total
 
 df_transfusoes = pd.DataFrame(transfusoes_data)
 df_transfusoes_valid = df_transfusoes[df_transfusoes["Total"] > 0]
 
-if transfusoes_total > 0:
+# Exibir o total geral de transfusões
+st.metric("Total Geral de Transfusões", f"{int(transfusoes_total_geral):,}")
+st.markdown("")
+
+# Exibir métricas por categoria em colunas
+if not df_transfusoes_valid.empty:
+    st.subheader("📋 Totais por Categoria")
+    
+    # Criar colunas para exibir as métricas
+    cols = st.columns(3)
+    for idx, row in df_transfusoes_valid.iterrows():
+        col_idx = idx % 3
+        with cols[col_idx]:
+            st.metric(
+                row["Componente"],
+                f"{int(row['Total']):,}",
+                delta=f"Amb: {int(row['Ambulatorial']):,} | Hosp: {int(row['Hospitalar']):,}"
+            )
+
+st.markdown("")
+
+if transfusoes_total_geral > 0:
     fig = px.bar(
         df_transfusoes_valid,
         x="Componente",
         y=["Ambulatorial", "Hospitalar"],
-        title="Transfusões por Ambiente",
+        title="Transfusões por Ambiente e Categoria",
         barmode="stack",
         color_discrete_sequence=["#16a085", "#2980b9"],
     )
     fig.update_xaxes(tickangle=-45)
+    fig.update_layout(height=500)
     st.plotly_chart(fig, use_container_width=True)
 else:
     st.info("Não há dados de transfusões realizadas no período selecionado.")
@@ -1225,6 +1390,7 @@ st.markdown("---")
 
 # ===== SEÇÃO 12: REAÇÕES TRANSFUSIONAIS =====
 st.header("⚠️ Reações Transfusionais")
+
 
 reacoes_cols = {
     "Reação Febril não Hemolítica": "reacoes_transfusionais_reacao_febril_nao_hemolitica",
@@ -1313,6 +1479,157 @@ else:
     )
 
 st.markdown("---")
+
+# ===== SEÇÃO NOVA: MONITORAMENTO DE ENVIOS =====
+st.header("📅 Monitoramento de Envios (Por Estado)")
+st.info("Visualização da regularidade de envios agregada por Estado ao longo do tempo (baseado nos filtros aplicados).")
+
+if "periodo_key" in df_filtrado.columns and "estado" in df_filtrado.columns:
+    # 1. Preparar dados
+    # Filtramos colunas essenciais e removemos nulos nas chaves
+    df_envios = df_filtrado[
+        ["estado", "periodo_key", "periodo_label"]
+    ].dropna(subset=["periodo_key", "estado"]).drop_duplicates()
+
+    if df_envios.empty:
+        st.warning("Não há dados suficientes com data e estado para gerar o monitoramento.")
+    else:
+        # 2. Gerar lista completa de períodos (Timeline) presente nos dados filtrados
+        todos_periodos = sorted(df_envios["periodo_key"].unique())
+        
+        # 3. Matriz de Presença (Heatmap Data)
+        # Linhas = Estado, Colunas = Período
+        matriz_envios = pd.crosstab(
+            df_envios["estado"], 
+            df_envios["periodo_key"]
+        )
+        
+        # Converter para binário (1 = enviou, 0 = não enviou)
+        matriz_envios_bin = (matriz_envios > 0).astype(int)
+        
+        # Ordenar: Quem enviou mais vezes aparece primeiro
+        matriz_envios_bin["total_envios"] = matriz_envios_bin.sum(axis=1)
+        matriz_envios_bin = matriz_envios_bin.sort_values("total_envios", ascending=False)
+        # Removemos a coluna auxiliar para não plotar
+        matriz_plot = matriz_envios_bin.drop(columns="total_envios")
+        
+        # GARANTIR TODOS OS ESTADOS NO EIXO Y
+        # Reindexa para incluir todos os estados oficiais, preenchendo com 0 (sem envio)
+        # Filtra apenas os estados que estão na lista oficial ESTADOS_BRASIL para evitar lixo
+        
+        # Primeiro, verifica se há estados no dataframe que não estão na lista oficial (ex: "Não Mapeado")
+        estados_presentes = [e for e in matriz_plot.index if e in ESTADOS_BRASIL]
+        
+        # Reindexa
+        matriz_plot = matriz_plot.reindex(ESTADOS_BRASIL, fill_value=0)
+
+        
+        # 4. Heatmap Interativo
+        # Altura dinâmica baseada no número de estados
+        altura_grafico = max(400, len(matriz_plot) * 30)
+        
+        fig_heat = px.imshow(
+            matriz_plot,
+            labels=dict(x="Período", y="Estado", color="Status"),
+            x=matriz_plot.columns,
+            y=matriz_plot.index,
+            # Vermelho bem claro (0) até Verde (1). 
+            color_continuous_scale=[(0, "#ffebee"), (1, "#2ecc71")], 
+            aspect="auto"
+        )
+        
+        # Ajustes visuais
+        fig_heat.update_layout(
+            title="Mapa de Calor de Envios por Estado",
+            xaxis_nticks=len(todos_periodos), 
+            height=altura_grafico,
+            coloraxis_showscale=False 
+        )
+        fig_heat.update_traces(
+            hovertemplate="<b>%{y}</b><br>Período: %{x}<br>Status: %{z}<extra></extra>"
+        )
+        
+        st.plotly_chart(fig_heat, use_container_width=True)
+        report_figures.append({"title": "Mapa de Calor de Regularidade (Envios)", "fig": fig_heat})
+        report_figures.append({"title": "Mapa de Calor de Regularidade (Envios)", "fig": fig_heat})
+        
+        # 5. Tabela Detalhada de Gaps (Buracos nos envios)
+        analise_gaps = []
+        
+        # Iteramos sobre a matriz ordenada
+        for estado_nome, row in matriz_plot.iterrows():
+            
+            # Índices (períodos) onde o valor é 1
+            periodos_enviados = row[row == 1].index.tolist()
+            
+            if not periodos_enviados:
+                continue
+                
+            primeiro_envio = min(periodos_enviados)
+            ultimo_envio = max(periodos_enviados)
+            qtd_envios = len(periodos_enviados)
+            
+            # Calcular gaps entre o PRIMEIRO envio e o ÚLTIMO envio
+            idx_start = todos_periodos.index(primeiro_envio)
+            idx_end = todos_periodos.index(ultimo_envio)
+            
+            # Todos os períodos que deveriam ter (janela temporal do próprio estado)
+            janela_esperada = todos_periodos[idx_start : idx_end + 1]
+            
+            missing = [p for p in janela_esperada if p not in periodos_enviados]
+            
+            status = "Regular"
+            if missing:
+                status = "Irregular"
+                
+            analise_gaps.append({
+                "Estado": estado_nome,
+                "Primeiro Envio": primeiro_envio,
+                "Último Envio": ultimo_envio,
+                "Total Envios": qtd_envios,
+                "Status": status,
+                "Qtd. Ausentes": len(missing),
+                "Meses Ausentes (Buracos)": ", ".join(missing) if missing else "-"
+            })
+            
+        df_gaps = pd.DataFrame(analise_gaps)
+        
+        st.subheader("📋 Detalhes de Regularidade por Estado")
+        
+        col_filtro1, col_filtro2 = st.columns(2)
+        with col_filtro1:
+            filtro_apenas_irregulares = st.checkbox("Mostrar apenas irregulares (com buracos)", value=False)
+            
+        if filtro_apenas_irregulares and not df_gaps.empty:
+            df_gaps_view = df_gaps[df_gaps["Status"] == "Irregular"]
+        else:
+            df_gaps_view = df_gaps
+            
+        st.dataframe(
+            df_gaps_view,
+            column_config={
+                "Meses Ausentes (Buracos)": st.column_config.TextColumn(width="large"),
+            },
+            hide_index=True,
+            use_container_width=True
+        )
+
+        # 6. Exportar para PDF (Botão na Sidebar)
+        # if not df_gaps_view.empty:
+        #     try:
+        #         # Agora passamos a lista COMPLETA de figuras coletadas
+        #         pdf_bytes = create_pdf_report(df_gaps_view, report_figures)
+        #         sidebar_pdf_placeholder.download_button(
+        #             label="📥 Baixar Relatório Completo (PDF)",
+        #             data=bytes(pdf_bytes),
+        #             file_name="relatorio_regularidade_hemoce.pdf",
+        #             mime="application/pdf"
+        #         )
+        #     except Exception as e:
+        #         st.error(f"Erro ao gerar PDF: {e}")
+
+st.markdown("---")
+
 # ===== SEÇÃO 14: ANÁLISE GEOGRÁFICA =====
 if "municipio" in df_filtrado.columns:
     st.header("🗺️ Análise por Município")
@@ -1352,37 +1669,6 @@ if "municipio" in df_filtrado.columns:
             color="Total Coletas",
             color_continuous_scale="Blues",
         )
-        fig.update_xaxes(tickangle=-45)
-        st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.info("Nenhuma coleta registrada na análise geográfica para os filtros selecionados.")
-
-# ===== SEÇÃO 15: OBSERVAÇÕES IMPORTANTES =====
-st.header("📝 Observações Importantes")
-
-obs_cols = ["hemoprod_1_observacoes", "hemoprod_2_observacoes", "hemoprod_3_observacoes"]
-obs_existentes = [col for col in obs_cols if col in df_filtrado.columns]
-
-if obs_existentes:
-    tem_observacoes = False
-    for col in obs_existentes:
-        obs_list = df_filtrado[col].dropna().unique()
-        if len(obs_list) > 0:
-            tem_observacoes = True
-            with st.expander(f"📌 {col.replace('_', ' ').title()}", expanded=False):
-                for obs in obs_list[:10]:  # Limita a 10 observações por categoria
-                    if str(obs).strip() and str(obs).lower() not in ['nan', 'none', '']:
-                        st.info(obs)
-    
-    if not tem_observacoes:
-        st.info("Não há observações registradas para os filtros selecionados.")
-else:
-    st.info("Colunas de observações não disponíveis no dataset.")
-
-st.markdown("---")
-
-# ===== SEÇÃO 16: TABELA DE DADOS =====
-st.header("📋 Dados Detalhados")
 
 colunas_importantes = [
     "estado",
